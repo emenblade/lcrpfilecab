@@ -3,23 +3,148 @@
   "title": "Request for Search and Seizure",
   "source_doc": "[LCRP] Search and Seizure",
   "html_file": "search_and_seizure.html",
+  "category": "Warrants & Orders",
+  "index_fields": [
+    "search_subject",
+    "criminal_code_section"
+  ],
   "fields": [
-    { "key": "petitioner", "label": "Petitioner", "prompt": "Who is petitioning for this search/seizure?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "requested_by", "label": "Requested By", "prompt": "Who is requesting this warrant?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "enforced_against", "label": "To Be Enforced Against", "prompt": "Who/what is this warrant to be enforced against?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "search_subject", "label": "Search/Seizure Subject", "prompt": "What property is to be searched or seized (address, vehicle, etc.)?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "items_to_be_seized", "label": "Items to Be Seized", "prompt": "What items are to be seized?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "background", "label": "Introduction and Background", "prompt": "Provide the introduction and background for this request.", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "affidavit_reason", "label": "Reason for Affidavit", "prompt": "Why are you applying for this search/seizure warrant?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "probable_cause", "label": "Probable Cause", "prompt": "What is the probable cause for this warrant?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "criminal_code_section", "label": "Criminal Code Section", "prompt": "Which San Andreas Criminal Code section is this search related to?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "supporting_documents", "label": "Supporting Documents", "prompt": "List any supporting documents attached.", "type": "text", "required": false, "filled_by": "applicant" },
-    { "key": "warrant_purpose", "label": "Warrant Purpose", "prompt": "What specifically are you applying for this search warrant to cover?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "requester_name", "label": "Requester's Name", "prompt": "What is your name?", "type": "signature", "required": true, "filled_by": "applicant" },
-    { "key": "date_filed", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "requester_rank_department", "label": "Rank & Department", "prompt": "What is your rank and department?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "special_considerations", "label": "Special Considerations", "prompt": "Are there any special considerations the court should know about? (or answer \"None\")", "type": "text", "required": false, "filled_by": "applicant" },
-    { "key": "approving_judge_name", "label": "Approving Judge/Justice", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when a judge approves the warrant — never asked of the requester." },
-    { "key": "approval_date", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" }
+    {
+      "key": "petitioner",
+      "label": "Petitioner",
+      "prompt": "Who is petitioning for this search/seizure?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "requested_by",
+      "label": "Requested By",
+      "prompt": "Who is requesting this warrant?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "enforced_against",
+      "label": "To Be Enforced Against",
+      "prompt": "Who/what is this warrant to be enforced against?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "search_subject",
+      "label": "Search/Seizure Subject",
+      "prompt": "What property is to be searched or seized (address, vehicle, etc.)?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "items_to_be_seized",
+      "label": "Items to Be Seized",
+      "prompt": "What items are to be seized?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "background",
+      "label": "Introduction and Background",
+      "prompt": "Provide the introduction and background for this request.",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "affidavit_reason",
+      "label": "Reason for Affidavit",
+      "prompt": "Why are you applying for this search/seizure warrant?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "probable_cause",
+      "label": "Probable Cause",
+      "prompt": "What is the probable cause for this warrant?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "criminal_code_section",
+      "label": "Criminal Code Section",
+      "prompt": "Which San Andreas Criminal Code section is this search related to?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "supporting_documents",
+      "label": "Supporting Documents",
+      "prompt": "List any supporting documents attached.",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "warrant_purpose",
+      "label": "Warrant Purpose",
+      "prompt": "What specifically are you applying for this search warrant to cover?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "requester_name",
+      "label": "Requester's Name",
+      "prompt": "What is your name?",
+      "type": "signature",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "requester_rank_department",
+      "label": "Rank & Department",
+      "prompt": "What is your rank and department?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "special_considerations",
+      "label": "Special Considerations",
+      "prompt": "Are there any special considerations the court should know about? (or answer \"None\")",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "approving_judge_name",
+      "label": "Approving Judge/Justice",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a judge approves the warrant — never asked of the requester."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    }
   ]
 }

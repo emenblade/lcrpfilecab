@@ -1,0 +1,121 @@
+[
+  {
+    "template_id": "business_partnership",
+    "title": "Business Partnership Agreement",
+    "category": "Business Filings",
+    "html_file": "business_partnership.html",
+    "json_file": "business_partnership.json"
+  },
+  {
+    "template_id": "dissolution_of_partnership",
+    "title": "Dissolution of Business Partnership Agreement",
+    "category": "Business Filings",
+    "html_file": "dissolution_of_partnership.html",
+    "json_file": "dissolution_of_partnership.json"
+  },
+  {
+    "template_id": "name_change",
+    "title": "Change of Name Request",
+    "category": "Civil & Family",
+    "html_file": "name_change.html",
+    "json_file": "name_change.json"
+  },
+  {
+    "template_id": "marriage_submission",
+    "title": "Marriage Licence",
+    "category": "Civil & Family",
+    "html_file": "marriage_submission.html",
+    "json_file": "marriage_submission.json"
+  },
+  {
+    "template_id": "divorce",
+    "title": "Order of Marriage Dissolution",
+    "category": "Civil & Family",
+    "html_file": "divorce.html",
+    "json_file": "divorce.json"
+  },
+  {
+    "template_id": "medical_power_of_attorney",
+    "title": "Power of Attorney for Health Care",
+    "category": "Civil & Family",
+    "html_file": "medical_power_of_attorney.html",
+    "json_file": "medical_power_of_attorney.json"
+  },
+  {
+    "template_id": "will_application",
+    "title": "Will and Testament Application",
+    "category": "Civil & Family",
+    "html_file": "will_application.html",
+    "json_file": "will_application.json"
+  },
+  {
+    "template_id": "foia_request",
+    "title": "Freedom of Information Request",
+    "category": "Court Filings & Petitions",
+    "html_file": "foia_request.html",
+    "json_file": "foia_request.json"
+  },
+  {
+    "template_id": "witness_affidavit",
+    "title": "Sworn Affidavit (Form AF-1)",
+    "category": "Court Filings & Petitions",
+    "html_file": "witness_affidavit.html",
+    "json_file": "witness_affidavit.json"
+  },
+  {
+    "template_id": "bail_agreement",
+    "title": "Bail Agreement",
+    "category": "Warrants & Orders",
+    "html_file": "bail_agreement.html",
+    "json_file": "bail_agreement.json"
+  },
+  {
+    "template_id": "order_to_release",
+    "title": "Order to Release",
+    "category": "Warrants & Orders",
+    "html_file": "order_to_release.html",
+    "json_file": "order_to_release.json"
+  },
+  {
+    "template_id": "search_and_seizure",
+    "title": "Request for Search and Seizure",
+    "category": "Warrants & Orders",
+    "html_file": "search_and_seizure.html",
+    "json_file": "search_and_seizure.json"
+  },
+  {
+    "template_id": "subpoena",
+    "title": "Request for Subpoena",
+    "category": "Warrants & Orders",
+    "html_file": "subpoena.html",
+    "json_file": "subpoena.json"
+  },
+  {
+    "template_id": "subpoena_business",
+    "title": "Subpoena Duces Tecum",
+    "category": "Warrants & Orders",
+    "html_file": "subpoena_business.html",
+    "json_file": "subpoena_business.json"
+  },
+  {
+    "template_id": "vehicle_return",
+    "title": "Vehicle Return",
+    "category": "Warrants & Orders",
+    "html_file": "vehicle_return.html",
+    "json_file": "vehicle_return.json"
+  },
+  {
+    "template_id": "arrest_warrant",
+    "title": "Warrant of Arrest",
+    "category": "Warrants & Orders",
+    "html_file": "arrest_warrant.html",
+    "json_file": "arrest_warrant.json"
+  },
+  {
+    "template_id": "warrant_of_execution",
+    "title": "Warrant of Execution",
+    "category": "Warrants & Orders",
+    "html_file": "warrant_of_execution.html",
+    "json_file": "warrant_of_execution.json"
+  }
+]

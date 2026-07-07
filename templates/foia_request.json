@@ -3,14 +3,84 @@
   "title": "Freedom of Information Request",
   "source_doc": "[LCRP] FOIA Request",
   "html_file": "foia_request.html",
+  "category": "Court Filings & Petitions",
+  "index_fields": [
+    "applicant_name",
+    "request_type"
+  ],
   "fields": [
-    { "key": "request_type", "label": "Type of Request", "prompt": "What type of FOIA request is this?", "type": "choice", "options": ["Personal Criminal Record", "Other Individual's Details - Background Check", "Report Details", "Business Background Check", "Civil Case Information"], "required": true, "filled_by": "applicant" },
-    { "key": "lawyer_name", "label": "Lawyer", "prompt": "Are you represented by a lawyer for this request? If so, name them (or answer \"None\").", "type": "string", "required": false, "filled_by": "applicant" },
-    { "key": "applicant_name", "label": "Applicant", "prompt": "What is your full name?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "date_filed", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "request_details", "label": "Request Details", "prompt": "Explain your reasoning for this request and exactly what details you're requesting (and, if not about yourself, why).", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "approving_judge_name", "label": "Judge", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when a judge approves the request — never asked of the applicant." },
-    { "key": "approval_date", "label": "Date (Judge)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "return_results", "label": "Return on Request", "prompt": null, "type": "text", "required": false, "filled_by": "judge", "note": "The actual FOIA results, provided by the approving member of the judiciary — not collected from the applicant." }
+    {
+      "key": "request_type",
+      "label": "Type of Request",
+      "prompt": "What type of FOIA request is this?",
+      "type": "choice",
+      "options": [
+        "Personal Criminal Record",
+        "Other Individual's Details - Background Check",
+        "Report Details",
+        "Business Background Check",
+        "Civil Case Information"
+      ],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "lawyer_name",
+      "label": "Lawyer",
+      "prompt": "Are you represented by a lawyer for this request? If so, name them (or answer \"None\").",
+      "type": "string",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "applicant_name",
+      "label": "Applicant",
+      "prompt": "What is your full name?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "request_details",
+      "label": "Request Details",
+      "prompt": "Explain your reasoning for this request and exactly what details you're requesting (and, if not about yourself, why).",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "approving_judge_name",
+      "label": "Judge",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a judge approves the request — never asked of the applicant."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date (Judge)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "return_results",
+      "label": "Return on Request",
+      "prompt": null,
+      "type": "text",
+      "required": false,
+      "filled_by": "judge",
+      "note": "The actual FOIA results, provided by the approving member of the judiciary — not collected from the applicant."
+    }
   ]
 }

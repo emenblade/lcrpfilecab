@@ -1,0 +1,32 @@
+name: Rebuild Filing Cabinet Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'filings/**'
+      - 'templates/*.json'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild templates/index.json and filings-index.json
+        run: python3 scripts/build_index.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add templates/index.json filings-index.json
+          git diff --staged --quiet || git commit -m "chore: rebuild filing cabinet index"
+          git push

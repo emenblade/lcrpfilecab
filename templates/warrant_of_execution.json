@@ -3,20 +3,117 @@
   "title": "Warrant of Execution",
   "source_doc": "[LCRP] Warrant of Execution",
   "html_file": "warrant_of_execution.html",
+  "category": "Warrants & Orders",
+  "index_fields": [
+    "defendant_name",
+    "case_number"
+  ],
   "notes": "Judge-authored document, like Order to Release — no separate citizen applicant role.",
   "fields": [
-    { "key": "approving_judge_name", "label": "Chambers of / Signature", "prompt": "Which judge/justice is issuing this warrant?", "type": "signature", "required": true, "filled_by": "judge", "note": "Appears in the 'Chambers of' header (plain) and the signature block (cursive)." },
-    { "key": "case_number", "label": "Case Number", "prompt": "What is the case number?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "case_name", "label": "Case Name", "prompt": "What is the case name (e.g. State v. Defendant)?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "defendant_name", "label": "Defendant", "prompt": "Who is the defendant?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "defendant_ssn", "label": "Defendant SSN", "prompt": "What is the defendant's SSN?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "trial_date", "label": "Trial Date", "prompt": "What date was the trial held?", "type": "date", "required": true, "filled_by": "judge" },
-    { "key": "charge", "label": "Charge", "prompt": "What charge was the defendant found guilty of?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "capital_punishment_order_number", "label": "Capital Punishment Order Number", "prompt": "What is the SC-DOJ Capital Punishment order number?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "appeals_start_time", "label": "Appeals Period Start", "prompt": "When does the appeals period begin?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "appeals_expire_time", "label": "Appeals Period Expiry", "prompt": "When does the appeals period expire?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "prep_start_time", "label": "Preparation Period Start", "prompt": "When does the Department of Corrections' preparation period begin?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "execution_earliest_time", "label": "Earliest Execution Time", "prompt": "What is the earliest the execution may take place?", "type": "string", "required": true, "filled_by": "judge" },
-    { "key": "approving_judge_title", "label": "Judge's Rank", "prompt": "What is the issuing judge's rank?", "type": "string", "required": true, "filled_by": "judge" }
+    {
+      "key": "approving_judge_name",
+      "label": "Chambers of / Signature",
+      "prompt": "Which judge/justice is issuing this warrant?",
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Appears in the 'Chambers of' header (plain) and the signature block (cursive)."
+    },
+    {
+      "key": "case_number",
+      "label": "Case Number",
+      "prompt": "What is the case number?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "case_name",
+      "label": "Case Name",
+      "prompt": "What is the case name (e.g. State v. Defendant)?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "defendant_name",
+      "label": "Defendant",
+      "prompt": "Who is the defendant?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "defendant_ssn",
+      "label": "Defendant SSN",
+      "prompt": "What is the defendant's SSN?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "trial_date",
+      "label": "Trial Date",
+      "prompt": "What date was the trial held?",
+      "type": "date",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "charge",
+      "label": "Charge",
+      "prompt": "What charge was the defendant found guilty of?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "capital_punishment_order_number",
+      "label": "Capital Punishment Order Number",
+      "prompt": "What is the SC-DOJ Capital Punishment order number?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "appeals_start_time",
+      "label": "Appeals Period Start",
+      "prompt": "When does the appeals period begin?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "appeals_expire_time",
+      "label": "Appeals Period Expiry",
+      "prompt": "When does the appeals period expire?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "prep_start_time",
+      "label": "Preparation Period Start",
+      "prompt": "When does the Department of Corrections' preparation period begin?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "execution_earliest_time",
+      "label": "Earliest Execution Time",
+      "prompt": "What is the earliest the execution may take place?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    },
+    {
+      "key": "approving_judge_title",
+      "label": "Judge's Rank",
+      "prompt": "What is the issuing judge's rank?",
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    }
   ]
 }

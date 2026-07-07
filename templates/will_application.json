@@ -3,19 +3,114 @@
   "title": "Will and Testament Application",
   "source_doc": "[LCRP] Will Application",
   "html_file": "will_application.html",
+  "category": "Civil & Family",
+  "index_fields": [
+    "applicant_name"
+  ],
   "notes": "Source Google Doc had leftover example data ('Blaine Walker', 'Juliet Wolf') from a test fill rather than a pristine blank — those were replaced with proper {{key}} fields. Asset list is modeled as one free-form multi-line field rather than a fixed 10-row table, since a bot-driven intake should let the applicant list as many assets as they have.",
   "fields": [
-    { "key": "applicant_name", "label": "Applicant Name", "prompt": "What is your full name?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "date_filed", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "discordia_email", "label": "Applicant Discordia", "prompt": "What Discord email/account do you have on file?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "applicant_ssn", "label": "SSN", "prompt": "What is your SSN?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "is_married", "label": "Marital Status", "prompt": "Are you married or not married?", "type": "choice", "options": ["Married", "Not Married"], "required": true, "filled_by": "applicant" },
-    { "key": "spouse_name", "label": "Spouse's Name", "prompt": "What is your spouse's name?", "type": "string", "required": false, "filled_by": "applicant", "note": "Only relevant if is_married is \"Married\"." },
-    { "key": "fallback_poa_name", "label": "Fallback Power of Attorney", "prompt": "If you are not married, who should receive power of attorney over your estate?", "type": "string", "required": false, "filled_by": "applicant", "note": "Only relevant if is_married is \"Not Married\"." },
-    { "key": "fallback_poa_ssn", "label": "Fallback POA SSN", "prompt": "What is that person's SSN?", "type": "string", "required": false, "filled_by": "applicant" },
-    { "key": "asset_list", "label": "Asset List", "prompt": "List your assets and who should receive each one, one per line (Asset — Recipient name and SSN).", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "applicant_signed_date", "label": "Date (Applicant Signature)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "approving_judge_name", "label": "Approving Justice", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when a Justice approves the will — never asked of the applicant." },
-    { "key": "approval_date", "label": "Date (Justice)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" }
+    {
+      "key": "applicant_name",
+      "label": "Applicant Name",
+      "prompt": "What is your full name?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "discordia_email",
+      "label": "Applicant Discordia",
+      "prompt": "What Discord email/account do you have on file?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "applicant_ssn",
+      "label": "SSN",
+      "prompt": "What is your SSN?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "is_married",
+      "label": "Marital Status",
+      "prompt": "Are you married or not married?",
+      "type": "choice",
+      "options": [
+        "Married",
+        "Not Married"
+      ],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "spouse_name",
+      "label": "Spouse's Name",
+      "prompt": "What is your spouse's name?",
+      "type": "string",
+      "required": false,
+      "filled_by": "applicant",
+      "note": "Only relevant if is_married is \"Married\"."
+    },
+    {
+      "key": "fallback_poa_name",
+      "label": "Fallback Power of Attorney",
+      "prompt": "If you are not married, who should receive power of attorney over your estate?",
+      "type": "string",
+      "required": false,
+      "filled_by": "applicant",
+      "note": "Only relevant if is_married is \"Not Married\"."
+    },
+    {
+      "key": "fallback_poa_ssn",
+      "label": "Fallback POA SSN",
+      "prompt": "What is that person's SSN?",
+      "type": "string",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "asset_list",
+      "label": "Asset List",
+      "prompt": "List your assets and who should receive each one, one per line (Asset — Recipient name and SSN).",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "applicant_signed_date",
+      "label": "Date (Applicant Signature)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "approving_judge_name",
+      "label": "Approving Justice",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a Justice approves the will — never asked of the applicant."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date (Justice)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    }
   ]
 }

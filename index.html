@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LCRP Department of Justice — Filing Cabinet</title>
+  <meta name="description" content="Public record archive of filed and signed Department of Justice documents for the Last Call RP San Andreas court system.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow+Condensed:wght@300;400;500;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base:       #060403;
+      --bg-surface:    #0c0906;
+      --bg-card:       #161009;
+      --bg-hover:      #1e160d;
+      --border-dim:    rgba(180, 120, 40, 0.10);
+      --border-mid:    rgba(180, 120, 40, 0.22);
+      --border-accent: rgba(200, 140, 50, 0.45);
+      --gold:          #c8821a;
+      --gold-light:    #e8b86d;
+      --gold-pale:     rgba(200, 130, 26, 0.10);
+      --text-primary:  #f0e8d4;
+      --text-secondary:#b8a88a;
+      --text-muted:    #3e3428;
+      --font-display:  'Cormorant Garamond', Georgia, serif;
+      --font-ui:       'Barlow Condensed', sans-serif;
+      --font-body:     'Barlow', sans-serif;
+      --nav-h:         56px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: var(--nav-h);
+      background: rgba(6, 4, 3, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 38px;
+      width: 38px;
+      object-fit: contain;
+    }
+    .nav-logo-text {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+    .nav-logo-text strong { color: var(--gold-light); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .btn-discord-nav {
+      font-family: var(--font-ui) !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      color: var(--bg-base) !important;
+      background: var(--gold) !important;
+      padding: 7px 18px !important;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s !important;
+    }
+    .btn-discord-nav:hover { background: var(--gold-light) !important; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      margin-left: 0.5rem;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: var(--text-secondary);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(6, 4, 3, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-mid);
+      padding: 1.5rem 1.5rem 2rem;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0.25rem;
+      animation: slideDown 0.2s ease;
+    }
+    .mobile-menu.open { display: flex; }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .mobile-menu a {
+      font-family: var(--font-ui);
+      font-size: 15px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 12px 4px;
+      border-bottom: 1px solid var(--border-dim);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .btn-discord-mobile {
+      margin-top: 1rem;
+      text-align: center;
+      color: var(--bg-base) !important;
+      background: var(--gold);
+      padding: 12px !important;
+      border-radius: 2px;
+      border-bottom: none !important;
+      font-weight: 600 !important;
+    }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 90px 2rem 70px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 30%, rgba(130, 60, 8, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 40% at 50% 80%, rgba(80, 30, 0, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0.8rem;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-sub {
+      font-family: var(--font-display);
+      font-size: clamp(16px, 2.2vw, 24px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold-light);
+      opacity: 0.8;
+      margin-top: 0.3em;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-desc {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin: 1.6rem auto 2.2rem;
+      line-height: 1.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .search-box {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 560px;
+    }
+    .search-input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-primary);
+      background: var(--bg-card);
+      border: 1px solid var(--border-mid);
+      border-radius: 3px;
+      padding: 15px 20px;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--border-accent);
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-hint {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.7rem;
+    }
+
+    /* ── MAIN CONTENT WRAPPER ────────────────────────────────── */
+    .docs-outer { border-top: 1px solid var(--border-dim); }
+    .docs-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 4.5rem 2.5rem 7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4.5rem;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.5vw, 46px);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .section-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--border-accent);
+      margin: 1.2rem 0 2rem;
+    }
+    .section-note {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-top: -1.4rem;
+      margin-bottom: 1.8rem;
+    }
+
+    /* ── CATEGORY CARDS ──────────────────────────────────────── */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1px;
+      background: var(--border-dim);
+      border: 1px solid var(--border-dim);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.4rem 1.5rem;
+      background: var(--bg-base);
+      text-align: left;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-family: inherit;
+    }
+    .category-card:hover, .category-card.active { background: var(--bg-card); }
+    .category-card.active { box-shadow: inset 3px 0 0 var(--gold); }
+    .category-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .category-count {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    /* ── FILINGS LIST ────────────────────────────────────────── */
+    .filings-list {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-dim);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .filing-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.1rem 1.75rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-dim);
+      transition: background 0.15s;
+    }
+    .filing-item:last-child { border-bottom: none; }
+    .filing-item:hover { background: var(--bg-card); }
+    .filing-badge {
+      flex-shrink: 0;
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-pale);
+      border: 1px solid rgba(200, 130, 26, 0.25);
+      border-radius: 2px;
+      padding: 3px 10px;
+      white-space: nowrap;
+    }
+    .filing-body { flex: 1; min-width: 0; }
+    .filing-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .filing-meta {
+      font-family: var(--font-ui);
+      font-size: 11.5px;
+      letter-spacing: 0.03em;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .filing-arrow {
+      flex-shrink: 0;
+      font-family: var(--font-ui);
+      font-size: 18px;
+      color: var(--text-muted);
+      transition: color 0.15s, transform 0.15s;
+    }
+    .filing-item:hover .filing-arrow { color: var(--gold); transform: translateX(3px); }
+
+    .list-empty {
+      padding: 3rem;
+      text-align: center;
+      font-family: var(--font-ui);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ── TEMPLATES GRID ──────────────────────────────────────── */
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border-dim);
+      border: 1px solid var(--border-dim);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .template-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.4rem;
+      text-decoration: none;
+      background: var(--bg-base);
+      transition: background 0.15s;
+    }
+    .template-card:hover { background: var(--bg-card); }
+    .template-icon {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gold-pale);
+      border: 1px solid rgba(200, 130, 26, 0.18);
+      border-radius: 2px;
+      color: var(--gold);
+    }
+    .template-name {
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .template-card:hover .template-name { color: var(--text-primary); }
+
+    /* ── LOADING ─────────────────────────────────────────────── */
+    .doc-loading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      font-family: var(--font-ui);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 2rem 0;
+    }
+    .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: blink 1.4s ease-in-out infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0.15; transform: scale(0.75); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border-dim);
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .footer-text {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero { padding: 70px 1.5rem 50px; }
+      .docs-inner { padding: 3rem 1.5rem 5rem; gap: 3.5rem; }
+      .templates-grid { grid-template-columns: 1fr; }
+      .filing-item { padding: 1rem 1.25rem; gap: 1rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/assets/lastcallrp-logo.png" alt="Last Call RP">
+    <span class="nav-logo-text">DOJ <strong>Filing Cabinet</strong></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#search">Search</a></li>
+    <li><a href="#filings">Filings</a></li>
+    <li><a href="#templates">Templates</a></li>
+    <li><a href="#" class="btn-discord-nav" id="discord-nav">Join Discord</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <a href="#search">Search</a>
+  <a href="#filings">Filings</a>
+  <a href="#templates">Templates</a>
+  <a href="#" class="btn-discord-mobile" id="discord-mobile">Join Discord</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <p class="hero-eyebrow">San Andreas Department of Justice</p>
+  <h1 class="hero-title">Filing Cabinet</h1>
+  <p class="hero-sub">— Public Record Archive —</p>
+  <p class="hero-desc">
+    Once a document is filed with the DOJ and signed by the court, it becomes public record here —
+    searchable, organized, and permanent.
+  </p>
+  <div class="search-box">
+    <input type="text" class="search-input" id="search-input" placeholder="Search by name, case, or document type&hellip;">
+    <p class="search-hint" id="search-hint">Loading records&hellip;</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="docs-outer">
+  <div class="docs-inner" id="docs-inner">
+    <div class="doc-loading">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span>Loading filing cabinet...</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">Last Call RP</p>
+  <p class="footer-text">FiveM &bull; Los Santos &bull; Department of Justice Filing Cabinet &bull; All filings are public record</p>
+</footer>
+
+<script>
+  (() => {
+    const btn  = document.getElementById('nav-hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+      });
+    });
+  })();
+
+  (async () => {
+    const DISCORD_URL = 'https://discord.gg/guftqbcA9a';
+    document.getElementById('discord-nav').href    = DISCORD_URL;
+    document.getElementById('discord-mobile').href = DISCORD_URL;
+
+    let templates = [];
+    let filings = [];
+
+    try {
+      const [tRes, fRes] = await Promise.all([
+        fetch('templates/index.json'),
+        fetch('filings-index.json?v=' + Date.now()),
+      ]);
+      templates = await tRes.json();
+      filings   = await fRes.json();
+    } catch (e) {
+      console.error('Failed to load index', e);
+      document.getElementById('docs-inner').innerHTML =
+        '<p style="color:var(--text-muted);font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase">Could not load the filing cabinet index.</p>';
+      return;
+    }
+
+    document.getElementById('search-hint').textContent =
+      `${filings.length} filing${filings.length === 1 ? '' : 's'} on record · ${templates.length} document types`;
+
+    const container = document.getElementById('docs-inner');
+    container.innerHTML = '';
+
+    // ── CATEGORIES ──────────────────────────────────────────
+    const categories = [...new Set([...templates, ...filings].map(x => x.category))].sort();
+    let activeCategory = null;
+
+    const categorySection = document.createElement('section');
+    categorySection.innerHTML = `
+      <p class="section-eyebrow">Browse</p>
+      <h2 class="section-heading">By Category</h2>
+      <div class="section-rule"></div>
+      <div class="category-grid" id="category-grid"></div>
+    `;
+    container.appendChild(categorySection);
+    const categoryGrid = categorySection.querySelector('#category-grid');
+
+    function renderCategories() {
+      categoryGrid.innerHTML = '';
+      const allCard = makeCategoryCard('All Categories', filings.length, activeCategory === null);
+      allCard.addEventListener('click', () => { activeCategory = null; renderCategories(); renderFilings(); });
+      categoryGrid.appendChild(allCard);
+
+      categories.forEach(cat => {
+        const count = filings.filter(f => f.category === cat).length;
+        const card = makeCategoryCard(cat, count, activeCategory === cat);
+        card.addEventListener('click', () => { activeCategory = cat; renderCategories(); renderFilings(); });
+        categoryGrid.appendChild(card);
+      });
+    }
+
+    function makeCategoryCard(name, count, active) {
+      const div = document.createElement('button');
+      div.className = 'category-card' + (active ? ' active' : '');
+      div.innerHTML = `
+        <span class="category-name">${escHtml(name)}</span>
+        <span class="category-count">${count} filing${count === 1 ? '' : 's'}</span>
+      `;
+      return div;
+    }
+
+    // ── FILINGS ─────────────────────────────────────────────
+    const filingsSection = document.createElement('section');
+    filingsSection.id = 'filings';
+    filingsSection.innerHTML = `
+      <p class="section-eyebrow">Public Record</p>
+      <h2 class="section-heading" id="filings-heading">Recent Filings</h2>
+      <div class="section-rule"></div>
+      <div class="filings-list" id="filings-list"></div>
+    `;
+    container.appendChild(filingsSection);
+    const filingsList = filingsSection.querySelector('#filings-list');
+    const filingsHeading = filingsSection.querySelector('#filings-heading');
+
+    function renderFilings() {
+      const query = searchInput.value.trim().toLowerCase();
+      let results = filings;
+      if (activeCategory) results = results.filter(f => f.category === activeCategory);
+      if (query) results = results.filter(f => f.search_text.includes(query));
+
+      filingsHeading.textContent = query ? `Results for “${searchInput.value.trim()}”`
+        : (activeCategory || 'Recent Filings');
+
+      filingsList.innerHTML = '';
+      if (results.length === 0) {
+        filingsList.innerHTML = '<div class="list-empty">No filings found</div>';
+        return;
+      }
+      results.slice(0, 100).forEach(f => {
+        const a = document.createElement('a');
+        a.className = 'filing-item';
+        a.href = f.url;
+        const parties = Object.values(f.index_values || {}).filter(Boolean).join(' · ');
+        a.innerHTML = `
+          <span class="filing-badge">${escHtml(f.category)}</span>
+          <span class="filing-body">
+            <span class="filing-title">${escHtml(f.title)}</span>
+            <div class="filing-meta">${escHtml(parties)}${parties ? ' &mdash; ' : ''}Signed ${escHtml(f.signed_date || f.filed_date || '')}${f.signed_by ? ' by ' + escHtml(f.signed_by) : ''}</div>
+          </span>
+          <span class="filing-arrow">&rarr;</span>
+        `;
+        filingsList.appendChild(a);
+      });
+    }
+
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', renderFilings);
+
+    renderCategories();
+    renderFilings();
+
+    // ── TEMPLATES ─────────────────────────────────────────────
+    const templatesSection = document.createElement('section');
+    templatesSection.id = 'templates';
+    templatesSection.innerHTML = `
+      <p class="section-eyebrow">Resources</p>
+      <h2 class="section-heading">Available Document Types</h2>
+      <div class="section-rule"></div>
+      <p class="section-note">These are the blank forms the DOJ bot can file on your behalf &mdash; they are not editable here.</p>
+      <div class="templates-grid" id="templates-grid"></div>
+    `;
+    container.appendChild(templatesSection);
+    const grid = templatesSection.querySelector('#templates-grid');
+
+    if (!templates.length) {
+      grid.innerHTML = '<div class="list-empty">No templates on file</div>';
+    } else {
+      templates.forEach(t => {
+        const a = document.createElement('a');
+        a.className = 'template-card';
+        a.href      = `templates/${t.html_file}`;
+        a.innerHTML = `
+          <div class="template-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <span class="template-name">${escHtml(t.title)}</span>
+        `;
+        grid.appendChild(a);
+      });
+    }
+
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+  })();
+</script>
+</body>
+</html>

@@ -124,7 +124,10 @@ table.form-grid td.wide-text {
    styling (underline / cursive) applies before and after. */
 span.field {
   display: inline-block;
+  max-width: 100%;
   min-width: 70px;
+  overflow-wrap: break-word;
+  word-break: break-word;
   border-bottom: 1px solid #555;
   padding: 0 2px 1px;
   color: #b23b3b;

@@ -3,15 +3,84 @@
   "title": "Bail Agreement",
   "source_doc": "[LCRP] Bail Agreement",
   "html_file": "bail_agreement.html",
+  "category": "Warrants & Orders",
+  "index_fields": [
+    "defendant_name",
+    "case_number"
+  ],
   "fields": [
-    { "key": "defendant_name", "label": "Defendant", "prompt": "What is the defendant's full name?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "defendant_ssn", "label": "SSN", "prompt": "What is the defendant's SSN?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "case_number", "label": "Case", "prompt": "What is the case number for this bail agreement?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "date_filed", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "bail_amount", "label": "Amount of Bail", "prompt": "What is the bail amount?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "defendant_signed_date", "label": "Date (Defendant Signature)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "approving_judge_name", "label": "Judiciary Signature", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when a judge accepts the bail on behalf of the Court — never asked of the applicant." },
-    { "key": "approval_date", "label": "Date (Judiciary Signature)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "approving_judge_title", "label": "Judiciary Name & Rank", "prompt": null, "type": "string", "required": true, "filled_by": "judge" }
+    {
+      "key": "defendant_name",
+      "label": "Defendant",
+      "prompt": "What is the defendant's full name?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "defendant_ssn",
+      "label": "SSN",
+      "prompt": "What is the defendant's SSN?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "case_number",
+      "label": "Case",
+      "prompt": "What is the case number for this bail agreement?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "bail_amount",
+      "label": "Amount of Bail",
+      "prompt": "What is the bail amount?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "defendant_signed_date",
+      "label": "Date (Defendant Signature)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "approving_judge_name",
+      "label": "Judiciary Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a judge accepts the bail on behalf of the Court — never asked of the applicant."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date (Judiciary Signature)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "approving_judge_title",
+      "label": "Judiciary Name & Rank",
+      "prompt": null,
+      "type": "string",
+      "required": true,
+      "filled_by": "judge"
+    }
   ]
 }

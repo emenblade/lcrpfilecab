@@ -3,14 +3,68 @@
   "title": "Sworn Affidavit (Form AF-1)",
   "source_doc": "[LCRP] Witness Affidavit",
   "html_file": "witness_affidavit.html",
+  "category": "Court Filings & Petitions",
+  "index_fields": [
+    "affiant_name",
+    "counsel_name"
+  ],
   "notes": "This form has no judge-approval step in the source document — it is witnessed/notarized by counsel, not a judge.",
   "fields": [
-    { "key": "counsel_name", "label": "Counsel", "prompt": "Which counsel is taking this affidavit?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "affiant_name", "label": "Affiant", "prompt": "Who is swearing this affidavit (the affiant's full name)?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "statement", "label": "Complaint Statement", "prompt": "What is the affiant's statement?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "incident_date", "label": "Date of Incident", "prompt": "What date does this statement concern?", "type": "date", "required": true, "filled_by": "applicant" },
-    { "key": "signed_datetime", "label": "Date and Time Signed", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "counsel_signature", "label": "Counsel Signature", "prompt": null, "type": "signature", "required": true, "filled_by": "applicant" },
-    { "key": "affiant_signature", "label": "Affiant Signature", "prompt": null, "type": "signature", "required": true, "filled_by": "applicant" }
+    {
+      "key": "counsel_name",
+      "label": "Counsel",
+      "prompt": "Which counsel is taking this affidavit?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "affiant_name",
+      "label": "Affiant",
+      "prompt": "Who is swearing this affidavit (the affiant's full name)?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "statement",
+      "label": "Complaint Statement",
+      "prompt": "What is the affiant's statement?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "incident_date",
+      "label": "Date of Incident",
+      "prompt": "What date does this statement concern?",
+      "type": "date",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "signed_datetime",
+      "label": "Date and Time Signed",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "counsel_signature",
+      "label": "Counsel Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "affiant_signature",
+      "label": "Affiant Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "applicant"
+    }
   ]
 }

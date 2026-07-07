@@ -3,20 +3,124 @@
   "title": "Request for Subpoena",
   "source_doc": "[LCRP] Subpoena",
   "html_file": "subpoena.html",
+  "category": "Warrants & Orders",
+  "index_fields": [
+    "subpoena_target",
+    "court_docket"
+  ],
   "fields": [
-    { "key": "applicant_role", "label": "Applicant Is", "prompt": "What is your role in this investigation?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "subpoena_target", "label": "Subpoena Target", "prompt": "Who/what is this subpoena to be issued to?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "court_docket", "label": "Court Docket", "prompt": "What is the court docket reference for this matter?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "info_requested", "label": "Information Requested", "prompt": "What information/documents are you requesting?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "reason_for_request", "label": "Reason for Request", "prompt": "Why are you requesting this subpoena?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "steps_taken_independently", "label": "Steps Already Taken", "prompt": "What steps have you already taken to obtain this information independently?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "unwillingness_reason", "label": "Reason for Unwillingness", "prompt": "Why do you believe this individual would be unwilling to voluntarily comply?", "type": "text", "required": true, "filled_by": "applicant" },
-    { "key": "supporting_documents", "label": "Supporting Documents", "prompt": "List any supporting documents attached.", "type": "text", "required": false, "filled_by": "applicant" },
-    { "key": "requester_name", "label": "Requester's Name", "prompt": "What is your name?", "type": "signature", "required": true, "filled_by": "applicant" },
-    { "key": "date_filed", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
-    { "key": "requester_rank_department", "label": "Rank & Department", "prompt": "What is your rank and department?", "type": "string", "required": true, "filled_by": "applicant" },
-    { "key": "special_considerations", "label": "Special Considerations", "prompt": "Are there any special considerations the court should know about? (or answer \"None\")", "type": "text", "required": false, "filled_by": "applicant" },
-    { "key": "approving_judge_name", "label": "Approving Judge/Justice", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when a judge approves the subpoena — never asked of the requester." },
-    { "key": "approval_date", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" }
+    {
+      "key": "applicant_role",
+      "label": "Applicant Is",
+      "prompt": "What is your role in this investigation?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "subpoena_target",
+      "label": "Subpoena Target",
+      "prompt": "Who/what is this subpoena to be issued to?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "court_docket",
+      "label": "Court Docket",
+      "prompt": "What is the court docket reference for this matter?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "info_requested",
+      "label": "Information Requested",
+      "prompt": "What information/documents are you requesting?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "reason_for_request",
+      "label": "Reason for Request",
+      "prompt": "Why are you requesting this subpoena?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "steps_taken_independently",
+      "label": "Steps Already Taken",
+      "prompt": "What steps have you already taken to obtain this information independently?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "unwillingness_reason",
+      "label": "Reason for Unwillingness",
+      "prompt": "Why do you believe this individual would be unwilling to voluntarily comply?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "supporting_documents",
+      "label": "Supporting Documents",
+      "prompt": "List any supporting documents attached.",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "requester_name",
+      "label": "Requester's Name",
+      "prompt": "What is your name?",
+      "type": "signature",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "requester_rank_department",
+      "label": "Rank & Department",
+      "prompt": "What is your rank and department?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "special_considerations",
+      "label": "Special Considerations",
+      "prompt": "Are there any special considerations the court should know about? (or answer \"None\")",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "approving_judge_name",
+      "label": "Approving Judge/Justice",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a judge approves the subpoena — never asked of the requester."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    }
   ]
 }
