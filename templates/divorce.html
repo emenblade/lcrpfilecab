@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Divorce</title>
+<link rel="stylesheet" href="template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Order of Marriage Dissolution</h1>
+
+    <p class="notice" style="text-align:center">This document is considered a NO-FAULT DIVORCE CERTIFICATION.</p>
+    <p class="warning">This is NOT valid until signed by a judge or other official so ordered to dispense this duty. Upon full signature, the relevant marriage is legally ended.</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Party One:</td>
+        <td><span class="field">{{party_one_name}}</span></td>
+        <td class="label">SSN:</td>
+        <td><span class="field">{{party_one_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Party Two:</td>
+        <td><span class="field">{{party_two_name}}</span></td>
+        <td class="label">SSN:</td>
+        <td><span class="field">{{party_two_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Counsel:</td>
+        <td><span class="field">{{counsel_name}}</span></td>
+        <td class="label">SSN:</td>
+        <td><span class="field">{{counsel_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Court Authority:</td>
+        <td><span class="field">{{approving_judge_name}}</span></td>
+        <td class="label">SSN:</td>
+        <td><span class="field">{{approving_judge_ssn}}</span></td>
+      </tr>
+    </table>
+
+    <table class="form-grid">
+      <tr><td class="label">Any Specific Requests to Be Documented:</td><td><span class="field">{{specific_requests}}</span></td></tr>
+    </table>
+
+    <h2 class="section">Signing</h2>
+    <p class="notice">MAY IT BE ENACTED:</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Either Party:</td>
+        <td><span class="field signature">{{signing_party_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{signing_party_date}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Court Authority:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{approval_date}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Counsel:</td>
+        <td><span class="field signature">{{counsel_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{counsel_signed_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">SC-DOJ &bull; Order of Marriage Dissolution &bull; template proof of concept</p>
+  </div>
+</body>
+</html>

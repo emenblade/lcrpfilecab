@@ -1,0 +1,16 @@
+{
+  "template_id": "order_to_release",
+  "title": "Order to Release",
+  "source_doc": "[LCRP] Order to Release",
+  "html_file": "order_to_release.html",
+  "notes": "Unlike most templates, this whole document is authored by the presiding judge/justice — there is no separate citizen applicant. All fields are filled_by \"judge\" except the auto-filled date.",
+  "fields": [
+    { "key": "approving_judge_name", "label": "Chambers of / Signature", "prompt": "Which judge/justice is issuing this order?", "type": "signature", "required": true, "filled_by": "judge", "note": "Appears twice: plain text in the 'Chambers of' header, cursive-rendered in the signature block. Same value both places." },
+    { "key": "order_number", "label": "Order Number", "prompt": "What is the SC-DOJ order number?", "type": "string", "required": true, "filled_by": "judge" },
+    { "key": "date_filed", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "summary", "label": "Summary", "prompt": "Provide a one-line summary of this order.", "type": "text", "required": true, "filled_by": "judge" },
+    { "key": "overview", "label": "Overview", "prompt": "Provide the full overview/rationale for this order.", "type": "text", "required": true, "filled_by": "judge" },
+    { "key": "release_subject_name", "label": "Subject of Release", "prompt": "Who is being ordered released from Bollingbrook?", "type": "string", "required": true, "filled_by": "judge" },
+    { "key": "approving_judge_title", "label": "Judge's Title", "prompt": "What is the issuing judge's title/rank?", "type": "string", "required": true, "filled_by": "judge" }
+  ]
+}

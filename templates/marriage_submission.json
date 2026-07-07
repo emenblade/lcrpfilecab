@@ -1,0 +1,22 @@
+{
+  "template_id": "marriage_submission",
+  "title": "Marriage Licence",
+  "source_doc": "[LCRP] Marriage Submission",
+  "html_file": "marriage_submission.html",
+  "notes": "Source uses 'CID' rather than 'SSN' — kept as printed, but keyed as _ssn for consistency with other templates.",
+  "fields": [
+    { "key": "party_one_name", "label": "Party One", "prompt": "What is Party One's full name?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "party_one_ssn", "label": "Party One CID", "prompt": "What is Party One's CID?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "party_two_name", "label": "Party Two", "prompt": "What is Party Two's full name?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "party_two_ssn", "label": "Party Two CID", "prompt": "What is Party Two's CID?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "officiant_name", "label": "Officiant", "prompt": "Who is officiating this marriage?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "officiant_ssn", "label": "Officiant CID", "prompt": "What is the officiant's CID?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "witness_name", "label": "Witness", "prompt": "Who is witnessing this marriage?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "witness_ssn", "label": "Witness CID", "prompt": "What is the witness's CID?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "party_one_signed_date", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "party_two_signed_date", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "officiant_signed_date", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "approving_judge_name", "label": "Judiciary", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "The reviewing/approving Judiciary of record — distinct from the Officiant. Filled in by the bot, never asked of the applicants." },
+    { "key": "approving_judge_ssn", "label": "Judiciary CID", "prompt": null, "type": "string", "required": true, "filled_by": "judge" }
+  ]
+}

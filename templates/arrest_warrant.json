@@ -1,0 +1,14 @@
+{
+  "template_id": "arrest_warrant",
+  "title": "Warrant of Arrest",
+  "source_doc": "[LCRP] Arrest Warrant TEMPLATE",
+  "html_file": "arrest_warrant.html",
+  "fields": [
+    { "key": "defendant_name", "label": "Commanded to Arrest", "prompt": "Who is this warrant ordering the arrest of? (full legal name)", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "charges", "label": "Formal Charges", "prompt": "What are the formal charges for this arrest?", "type": "text", "required": true, "filled_by": "applicant" },
+    { "key": "date_filed", "label": "Dated", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "issuing_officer_name", "label": "Signed", "prompt": null, "type": "signature", "required": true, "filled_by": "applicant", "note": "The DOJ command official issuing the warrant, not the approving judge." },
+    { "key": "approving_judge_name", "label": "Approved by", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when a judge approves the warrant — never asked of the requester." },
+    { "key": "approval_date", "label": "Date/Time", "prompt": null, "type": "date", "required": true, "filled_by": "auto" }
+  ]
+}

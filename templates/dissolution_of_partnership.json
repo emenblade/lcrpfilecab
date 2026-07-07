@@ -1,0 +1,32 @@
+{
+  "template_id": "dissolution_of_partnership",
+  "title": "Dissolution of Business Partnership Agreement",
+  "source_doc": "[LCRP] Dissolution of Partnership",
+  "html_file": "dissolution_of_partnership.html",
+  "notes": "Reuses the same partner1/partner2/business_name/business_address/effective_date keys as business_partnership.json for consistency across the two related documents.",
+  "fields": [
+    { "key": "effective_date", "label": "Effective Date", "prompt": "What date does this dissolution take effect?", "type": "date", "required": true, "filled_by": "applicant" },
+    { "key": "business_name", "label": "Business Name", "prompt": "What is the business's name?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "business_address", "label": "Business Address", "prompt": "What is the business's principal address?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "partner1_name", "label": "Partner 1 Name", "prompt": "What is Partner 1's full name?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "partner1_ssn", "label": "Partner 1 SSN", "prompt": "What is Partner 1's SSN?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "partner1_address", "label": "Partner 1 Address", "prompt": "What is Partner 1's address?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "partner2_name", "label": "Partner 2 Name", "prompt": "What is Partner 2's full name?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "partner2_ssn", "label": "Partner 2 SSN", "prompt": "What is Partner 2's SSN?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "partner2_address", "label": "Partner 2 Address", "prompt": "What is Partner 2's address?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "requesting_partner", "label": "Requesting Partner", "prompt": "Which partner is requesting this dissolution?", "type": "choice", "options": ["Partner 1", "Partner 2", "Both Partners"], "required": true, "filled_by": "applicant" },
+    { "key": "cessation_basis", "label": "Cessation Basis", "prompt": "Is this partnership ceasing due to voluntary withdrawal, involuntary withdrawal, or dissolution?", "type": "choice", "options": ["Voluntary Withdrawal", "Involuntary Withdrawal", "Dissolution"], "required": true, "filled_by": "applicant" },
+    { "key": "involuntary_withdrawal_reason", "label": "Involuntary Withdrawal Reason", "prompt": "If involuntary withdrawal, what is the reason?", "type": "choice", "options": ["Death of a Partner", "Partner incapacitated", "Incompetence or negligence", "Breach of fiduciary duties", "Criminal or civil judgment", "Other breach of Agreement"], "required": false, "filled_by": "applicant", "note": "Only relevant if cessation_basis is \"Involuntary Withdrawal\"." },
+    { "key": "further_details", "label": "Further Details", "prompt": "Provide further details about this dissolution.", "type": "text", "required": true, "filled_by": "applicant" },
+    { "key": "dissolution_type", "label": "Dissolution Type", "prompt": "If this is a dissolution, which type applies?", "type": "choice", "options": ["Single owner operation", "Sold to a new Partner", "Business will cease to operate"], "required": false, "filled_by": "applicant", "note": "Only relevant if cessation_basis is \"Dissolution\"." },
+    { "key": "is_sold_to_new_partner", "label": "Sold to New Partner?", "prompt": "Will the partnership be sold to a new partner?", "type": "choice", "options": ["Yes", "No"], "required": true, "filled_by": "applicant" },
+    { "key": "new_partner_name", "label": "New Partner Name", "prompt": "What is the new partner's full name?", "type": "string", "required": false, "filled_by": "applicant", "note": "Only relevant if is_sold_to_new_partner is \"Yes\"." },
+    { "key": "new_partner_ssn", "label": "New Partner SSN", "prompt": "What is the new partner's SSN?", "type": "string", "required": false, "filled_by": "applicant" },
+    { "key": "new_partner_address", "label": "New Partner Address", "prompt": "What is the new partner's address?", "type": "string", "required": false, "filled_by": "applicant" },
+    { "key": "partner1_signed_date", "label": "Date (Partner 1 Signature)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "partner2_signed_date", "label": "Date (Partner 2 Signature)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" },
+    { "key": "approving_judge_name", "label": "Court Authority Signature", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot when the DOJ accepts the dissolution — never asked of the partners." },
+    { "key": "approving_judge_title", "label": "Court Authority Print Name", "prompt": null, "type": "string", "required": true, "filled_by": "judge" },
+    { "key": "approval_date", "label": "Date (Court Authority)", "prompt": null, "type": "date", "required": true, "filled_by": "auto" }
+  ]
+}

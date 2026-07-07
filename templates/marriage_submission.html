@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Marriage Submission</title>
+<link rel="stylesheet" href="template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Marriage Licence</h1>
+
+    <p class="notice" style="text-align:center">This document is considered a LONG-FORM MARRIAGE LICENCE.</p>
+    <p class="warning">This licence is NOT valid until signed by a justice of the peace or other official so ordered to dispense this duty.</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Party One:</td>
+        <td><span class="field">{{party_one_name}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{party_one_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Party Two:</td>
+        <td><span class="field">{{party_two_name}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{party_two_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Officiant:</td>
+        <td><span class="field">{{officiant_name}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{officiant_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Witness:</td>
+        <td><span class="field">{{witness_name}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{witness_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Judiciary:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{approving_judge_ssn}}</span></td>
+      </tr>
+    </table>
+
+    <h2 class="section">Signing</h2>
+    <p class="notice">MAY IT BE ENACTED:</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Party One's Signature:</td>
+        <td><span class="field signature">{{party_one_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{party_one_signed_date}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Party Two's Signature:</td>
+        <td><span class="field signature">{{party_two_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{party_two_signed_date}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Officiant:</td>
+        <td><span class="field signature">{{officiant_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{officiant_signed_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">SC-DOJ &bull; Marriage Licence &bull; template proof of concept</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "template_id": "name_change",
+  "title": "Change of Name Request",
+  "source_doc": "[LCRP] DOJ Name Change",
+  "html_file": "name_change.html",
+  "fields": [
+    { "key": "current_name", "label": "Current Name", "prompt": "What is your current legal name?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "date_filed", "label": "Date of Application", "prompt": null, "type": "date", "required": true, "filled_by": "auto", "note": "Auto-fill with today's date when the request is submitted." },
+    { "key": "discordia_email", "label": "Discordia Email", "prompt": "What Discord email/account do you have on file?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "ssn", "label": "SSN", "prompt": "What is your character's SSN?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "legal_representative", "label": "Legal Representative", "prompt": "Do you have a legal representative for this request? If so, name them (or answer \"None\").", "type": "string", "required": false, "filled_by": "applicant" },
+    { "key": "requested_name", "label": "Requested Name", "prompt": "What name are you requesting to change to?", "type": "string", "required": true, "filled_by": "applicant" },
+    { "key": "reason_for_change", "label": "Reason for Change", "prompt": "Explain your reason for this name change, including any prior criminal history or outstanding warrants.", "type": "text", "required": true, "filled_by": "applicant" },
+    { "key": "approving_judge_name", "label": "Approving Judiciary", "prompt": null, "type": "signature", "required": true, "filled_by": "judge", "note": "Rendered in cursive. Filled in by the bot with the approving judge's on-file signature when the request is approved — never asked of the applicant." },
+    { "key": "approval_date", "label": "Date", "prompt": null, "type": "date", "required": true, "filled_by": "auto", "note": "Auto-fill with today's date when a judge approves the request." }
+  ]
+}

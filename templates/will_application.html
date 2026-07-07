@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Will Application</title>
+<link rel="stylesheet" href="template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Will and Testament Application</h1>
+
+    <p class="intro">
+      This form is for the application and formalisation of any will and testament you wish for approval by
+      the Department of Justice and the Government of San Andreas.
+    </p>
+    <p class="warning">This application is NOT valid until signed by a Supreme Court Justice after approval from Government officials.</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Applicant Name:</td>
+        <td><span class="field">{{applicant_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{date_filed}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Applicant Discordia:</td>
+        <td><span class="field">{{discordia_email}}</span></td>
+        <td class="label">SSN:</td>
+        <td><span class="field">{{applicant_ssn}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Approving Justice:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{approval_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="doc-body">
+      I, <span class="field">{{applicant_name}}</span>, a resident of the State of San Andreas, declare this to
+      be my Last Will and Testament, and revoke all previous wills and codicils made by me, either jointly or
+      severally.
+    </p>
+
+    <h2 class="section">Declarations</h2>
+    <div class="doc-body">
+      <ol>
+        <li>I am of sound mind and legal age to make this Last Will.</li>
+        <li>This Last Will expresses my wishes without undue influence of duress.</li>
+        <li>
+          At the time of executing this Last Will, my marital status is:
+          <span class="field">{{is_married}}</span>
+          <ul>
+            <li>If married &mdash; spouse's name: <span class="field">{{spouse_name}}</span></li>
+            <li>If NOT married &mdash; should I pass, I allow power of attorney to be provided to
+              <span class="field">{{fallback_poa_name}}</span> (SSN: <span class="field">{{fallback_poa_ssn}}</span>)
+              over all my estate.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <h2 class="section">Article 1 &mdash; Asset List</h2>
+    <p class="doc-body">I hereby declare all assets and capital as listed, to be handed over to the respective individuals as stated per line.</p>
+    <table class="form-grid">
+      <tr>
+        <td class="section-label">Asset Name (incl. reference numbers) &amp; Recipient's Name/SSN</td>
+      </tr>
+      <tr>
+        <td class="wide-text"><span class="field block">{{asset_list}}</span></td>
+      </tr>
+    </table>
+
+    <h2 class="section">Article 2 &mdash; Signing &amp; Approval</h2>
+    <p class="doc-body">
+      The following Will and Testament has been reviewed and authorised by the Government of San Andreas, and
+      approved by the Department of Justice's Supreme Court. This Will and Testament will activate on the
+      passing of the applicant as stated above.
+    </p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Applicant's Print &amp; Signature:</td>
+        <td><span class="field signature">{{applicant_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{applicant_signed_date}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Justice's Print &amp; Signature:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{approval_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">SC-DOJ &bull; Will and Testament Application &bull; template proof of concept</p>
+  </div>
+</body>
+</html>

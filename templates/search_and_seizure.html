@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Search and Seizure</title>
+<link rel="stylesheet" href="template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Request for Search and Seizure</h1>
+
+    <table class="form-grid">
+      <tr><td class="label">Petitioner:</td><td><span class="field">{{petitioner}}</span></td></tr>
+      <tr><td class="label">Requested By:</td><td><span class="field">{{requested_by}}</span></td></tr>
+      <tr><td class="label">To Be Enforced Against:</td><td><span class="field">{{enforced_against}}</span></td></tr>
+      <tr><td class="label">In the Matter of the Search/Seizure of:</td><td><span class="field">{{search_subject}}</span></td></tr>
+    </table>
+
+    <h2 class="section">Items to Be Seized</h2>
+    <p class="doc-body"><span class="field block">{{items_to_be_seized}}</span></p>
+
+    <h2 class="section">Introduction and Background</h2>
+    <p class="doc-body"><span class="field block">{{background}}</span></p>
+
+    <h2 class="section">Affidavit in Support of Application</h2>
+    <p class="doc-body">
+      I make this affidavit in support of an application for a search/seizure warrant for the following reason:<br>
+      <span class="field block">{{affidavit_reason}}</span>
+    </p>
+
+    <h2 class="section">Probable Cause</h2>
+    <p class="doc-body">There is probable cause to believe that:<br>
+      <span class="field block">{{probable_cause}}</span>
+    </p>
+
+    <div class="doc-body">
+      <p><strong>The basis for this under the San Andreas Criminal Code is:</strong></p>
+      <ul>
+        <li>Evidence of a crime <em>(e.g. raiding a property for a murder weapon)</em></li>
+        <li>Contraband, fruits of crime, or other items illegally possessed <em>(e.g. raiding a property for illegal drugs or firearms)</em></li>
+        <li>Property designed for use, intended for use, or used in committing a crime <em>(e.g. seizing property due to its extensive use in a crime)</em></li>
+      </ul>
+    </div>
+
+    <table class="form-grid">
+      <tr><td class="label">Criminal Code Section Violated:</td><td><span class="field">{{criminal_code_section}}</span></td></tr>
+    </table>
+
+    <h2 class="section">Supporting Documents</h2>
+    <p class="doc-body"><span class="field block">{{supporting_documents}}</span></p>
+
+    <h2 class="section">Application</h2>
+    <p class="doc-body">
+      I make this affidavit in support of an application for a search warrant for:<br>
+      <span class="field block">{{warrant_purpose}}</span>
+    </p>
+
+    <p class="warning">I, SWORN OFFICER OF THE LAW, DECLARE UNDER PENALTY OF PERJURY UNDER THE LAWS OF THE STATE OF SAN ANDREAS THAT THE INFORMATION PROVIDED IS TRUE AND CORRECT.</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Requester's Name:</td>
+        <td><span class="field signature">{{requester_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{date_filed}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Rank &amp; Department:</td>
+        <td colspan="3"><span class="field">{{requester_rank_department}}</span></td>
+      </tr>
+    </table>
+
+    <table class="form-grid">
+      <tr><td class="label">Special Considerations:</td><td><span class="field">{{special_considerations}}</span></td></tr>
+    </table>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Approving Judge/Justice:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{approval_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">SC-DOJ &bull; Request for Search and Seizure &bull; template proof of concept</p>
+  </div>
+</body>
+</html>

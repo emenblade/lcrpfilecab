@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Warrant of Execution</title>
+<link rel="stylesheet" href="template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Warrant of Execution</h1>
+
+    <p class="intro">Chambers of: <span class="field">{{approving_judge_name}}</span></p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Case Number:</td>
+        <td><span class="field">{{case_number}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Case Name:</td>
+        <td><em><span class="field">{{case_name}}</span></em></td>
+      </tr>
+    </table>
+
+    <div class="doc-body">
+      <p>
+        The Supreme Court of the State of San Andreas issues this Warrant of Execution to impose the death
+        penalty on <span class="field">{{defendant_name}}</span> (SSN: <span class="field">{{defendant_ssn}}</span>),
+        defendant in the matter of <em><span class="field">{{case_name}}</span></em>.
+      </p>
+      <p>
+        Trial was held on <span class="field">{{trial_date}}</span> at the Los Santos Courthouse. After hearing
+        witness testimony and evaluating the evidence and arguments presented by the State and Defendant, the
+        Court issued a verdict of Guilty against the defendant on the charge of <span class="field">{{charge}}</span>.
+        The defendant was sentenced to execution by firing squad.
+      </p>
+    </div>
+
+    <h2 class="section">Order</h2>
+    <div class="doc-body">
+      <p>
+        Pursuant to Supreme Court Order SC-DOJ <span class="field">{{capital_punishment_order_number}}</span>
+        Capital Punishment, the appeals period shall begin at <span class="field">{{appeals_start_time}}</span>
+        and expire at <span class="field">{{appeals_expire_time}}</span>. The convicted prisoner may seek appeal
+        during that time. At <span class="field">{{prep_start_time}}</span>, the Department of Corrections shall
+        undertake the preparation period for the execution. The execution may not take place until after
+        <span class="field">{{execution_earliest_time}}</span>, or later.
+      </p>
+    </div>
+
+    <p class="notice">Respectfully,</p>
+    <table class="form-grid">
+      <tr>
+        <td>
+          Signature<br>
+          <span class="field signature">{{approving_judge_name}}</span><br>
+          <span class="field">{{approving_judge_title}}</span><br>
+          San Andreas Supreme Court
+        </td>
+      </tr>
+    </table>
+
+    <p class="meta">SC-DOJ &bull; Warrant of Execution &bull; template proof of concept</p>
+  </div>
+</body>
+</html>

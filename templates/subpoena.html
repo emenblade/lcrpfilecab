@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Subpoena</title>
+<link rel="stylesheet" href="template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Request for Subpoena</h1>
+
+    <table class="form-grid">
+      <tr><td class="label">Applicant Is:</td><td><span class="field">{{applicant_role}}</span></td></tr>
+      <tr><td class="label">Applicant Requests the Court Issue a Subpoena for Discovery To:</td><td><span class="field">{{subpoena_target}}</span></td></tr>
+      <tr><td class="label">Attached Court Docket:</td><td><span class="field">{{court_docket}}</span></td></tr>
+    </table>
+
+    <p class="doc-body"><strong>I Am Applying For:</strong> Subpoena Duces Tecum to compel the delivery of documents.</p>
+
+    <h2 class="section">Information Requested</h2>
+    <p class="doc-body"><span class="field block">{{info_requested}}</span></p>
+
+    <h2 class="section">Reason for This Request</h2>
+    <p class="doc-body"><span class="field block">{{reason_for_request}}</span></p>
+
+    <p class="doc-body">I confirm that I have made all reasonable attempts to explore other avenues in an attempt to secure this information and that this request is the result of having no other options available: <strong>Yes</strong></p>
+
+    <h2 class="section">Steps Already Taken Independently</h2>
+    <p class="doc-body"><span class="field block">{{steps_taken_independently}}</span></p>
+
+    <h2 class="section">Reason This Individual Would Be Unwilling to Voluntarily Comply</h2>
+    <p class="doc-body"><span class="field block">{{unwillingness_reason}}</span></p>
+
+    <h2 class="section">Supporting Documents</h2>
+    <p class="doc-body"><span class="field block">{{supporting_documents}}</span></p>
+
+    <p class="warning">I DECLARE UNDER PENALTY OF PERJURY UNDER THE LAWS OF THE STATE OF SAN ANDREAS THAT THE FOREGOING IS TRUE AND CORRECT: Yes</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Requester's Name:</td>
+        <td><span class="field signature">{{requester_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{date_filed}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Rank &amp; Department:</td>
+        <td colspan="3"><span class="field">{{requester_rank_department}}</span></td>
+      </tr>
+    </table>
+
+    <table class="form-grid">
+      <tr><td class="label">Special Considerations:</td><td><span class="field">{{special_considerations}}</span></td></tr>
+    </table>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Approving Judge/Justice:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{approval_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">SC-DOJ &bull; Request for Subpoena &bull; template proof of concept</p>
+  </div>
+</body>
+</html>
