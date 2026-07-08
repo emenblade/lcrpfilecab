@@ -14,35 +14,5 @@
       "partner2_name": "the other guy"
     },
     "search_text": "business partnership agreement business_partnership-2026-0001 me and u inc dude 1 the other guy judge emen"
-  },
-  {
-    "filing_id": "name_change-2026-0001",
-    "template_id": "name_change",
-    "title": "Change of Name Request",
-    "category": "Civil & Family",
-    "url": "filings/name_change/name_change-2026-0001.html",
-    "filed_date": "2026-07-07",
-    "signed_date": "2026-07-07",
-    "signed_by": "Judge not frank2",
-    "index_values": {
-      "current_name": "frank",
-      "requested_name": "frank JR"
-    },
-    "search_text": "change of name request name_change-2026-0001 frank frank jr judge not frank2"
-  },
-  {
-    "filing_id": "witness_affidavit-2026-0001",
-    "template_id": "witness_affidavit",
-    "title": "Sworn Affidavit (Form AF-1)",
-    "category": "Court Filings & Petitions",
-    "url": "filings/witness_affidavit/witness_affidavit-2026-0001.html",
-    "filed_date": "2026-07-07",
-    "signed_date": "2026-07-07",
-    "signed_by": "Semen Blade",
-    "index_values": {
-      "affiant_name": "EMEN BLADE",
-      "counsel_name": "the other one i guess"
-    },
-    "search_text": "sworn affidavit (form af-1) witness_affidavit-2026-0001 emen blade the other one i guess semen blade"
   }
 ]
