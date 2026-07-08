@@ -13,5 +13,20 @@
       "requested_name": "Marcus Sterling"
     },
     "search_text": "change of name request name_change-2026-0001 marcus webb marcus sterling cassius hale"
+  },
+  {
+    "filing_id": "bail_agreement-2026-0002",
+    "template_id": "bail_agreement",
+    "title": "Bail Agreement",
+    "category": "Warrants & Orders",
+    "url": "filings/bail_agreement/bail_agreement-2026-0002.html",
+    "filed_date": "2026-07-07",
+    "signed_date": "2026-07-07",
+    "signed_by": "billy bob",
+    "index_values": {
+      "defendant_name": "frank quick fire",
+      "case_number": "70320"
+    },
+    "search_text": "bail agreement bail_agreement-2026-0002 frank quick fire 70320 billy bob"
   }
 ]
