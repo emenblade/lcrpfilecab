@@ -8,6 +8,25 @@
     "affiant_name",
     "counsel_name"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "affiant",
+      "label": "Affiant",
+      "requires_handoff": true,
+      "name_field": "affiant_name"
+    },
+    {
+      "role": "counsel",
+      "label": "Counsel/Notary",
+      "requires_handoff": true,
+      "name_field": "counsel_name"
+    }
+  ],
   "notes": "This form has no judge-approval step in the source document — it is witnessed/notarized by counsel, not a judge.",
   "fields": [
     {
@@ -56,7 +75,7 @@
       "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "applicant"
+      "filled_by": "counsel"
     },
     {
       "key": "affiant_signature",
@@ -64,7 +83,7 @@
       "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "applicant"
+      "filled_by": "affiant"
     }
   ]
 }

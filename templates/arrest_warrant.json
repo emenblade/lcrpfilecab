@@ -8,6 +8,19 @@
     "defendant_name",
     "charges"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Issuing Officer",
+      "requires_handoff": false
+    },
+    {
+      "role": "judge",
+      "label": "Approving Judge",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "defendant_name",

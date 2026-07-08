@@ -12,6 +12,8 @@ DUMMY = {
 }
 
 for json_path in sorted(glob.glob("*.json")):
+    if json_path == "index.json":
+        continue
     with open(json_path) as f:
         manifest = json.load(f)
     html_path = manifest["html_file"]

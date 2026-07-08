@@ -8,6 +8,19 @@
     "search_subject",
     "criminal_code_section"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "judge",
+      "label": "Approving Judge",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "petitioner",

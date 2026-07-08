@@ -8,6 +8,14 @@
     "release_subject_name",
     "order_number"
   ],
+  "signers": [
+    {
+      "role": "judge",
+      "label": "Issuing Judge",
+      "requires_handoff": false,
+      "note": "This document is authored entirely by the judge — no separate filer role."
+    }
+  ],
   "notes": "Unlike most templates, this whole document is authored by the presiding judge/justice — there is no separate citizen applicant. All fields are filled_by \"judge\" except the auto-filled date.",
   "fields": [
     {

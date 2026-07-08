@@ -9,6 +9,31 @@
     "partner1_name",
     "partner2_name"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "partner1",
+      "label": "Partner 1",
+      "requires_handoff": true,
+      "name_field": "partner1_name"
+    },
+    {
+      "role": "partner2",
+      "label": "Partner 2",
+      "requires_handoff": true,
+      "name_field": "partner2_name"
+    },
+    {
+      "role": "judge",
+      "label": "Court Authority",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "notes": "Most of this document is fixed legal boilerplate (Voting, Partner Duties, Dissolution, etc.) with no fillable fields — only the identifying/signature blocks are variable.",
   "fields": [
     {
@@ -92,12 +117,30 @@
       "filled_by": "auto"
     },
     {
+      "key": "partner1_signature",
+      "label": "Partner 1 Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "partner1",
+      "note": "Collected from Partner 1 directly."
+    },
+    {
       "key": "partner2_signed_date",
       "label": "Date (Partner 2 Signature)",
       "prompt": null,
       "type": "date",
       "required": true,
       "filled_by": "auto"
+    },
+    {
+      "key": "partner2_signature",
+      "label": "Partner 2 Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "partner2",
+      "note": "Collected from Partner 2 directly."
     },
     {
       "key": "approving_judge_name",

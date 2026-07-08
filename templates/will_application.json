@@ -7,6 +7,19 @@
   "index_fields": [
     "applicant_name"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "judge",
+      "label": "Approving Justice",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "notes": "Source Google Doc had leftover example data ('Blaine Walker', 'Juliet Wolf') from a test fill rather than a pristine blank — those were replaced with proper {{key}} fields. Asset list is modeled as one free-form multi-line field rather than a fixed 10-row table, since a bot-driven intake should let the applicant list as many assets as they have.",
   "fields": [
     {

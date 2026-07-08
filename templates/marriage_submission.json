@@ -8,6 +8,37 @@
     "party_one_name",
     "party_two_name"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "party_one",
+      "label": "Party One",
+      "requires_handoff": true,
+      "name_field": "party_one_name"
+    },
+    {
+      "role": "party_two",
+      "label": "Party Two",
+      "requires_handoff": true,
+      "name_field": "party_two_name"
+    },
+    {
+      "role": "officiant",
+      "label": "Officiant",
+      "requires_handoff": true,
+      "name_field": "officiant_name"
+    },
+    {
+      "role": "judge",
+      "label": "Judiciary",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "notes": "Source uses 'CID' rather than 'SSN' — kept as printed, but keyed as _ssn for consistency with other templates.",
   "fields": [
     {
@@ -83,6 +114,15 @@
       "filled_by": "auto"
     },
     {
+      "key": "party_one_signature",
+      "label": "Party One's Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "party_one",
+      "note": "Collected from Party One directly."
+    },
+    {
       "key": "party_two_signed_date",
       "label": "Date",
       "prompt": null,
@@ -91,12 +131,30 @@
       "filled_by": "auto"
     },
     {
+      "key": "party_two_signature",
+      "label": "Party Two's Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "party_two",
+      "note": "Collected from Party Two directly."
+    },
+    {
       "key": "officiant_signed_date",
       "label": "Date",
       "prompt": null,
       "type": "date",
       "required": true,
       "filled_by": "auto"
+    },
+    {
+      "key": "officiant_signature",
+      "label": "Officiant Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "officiant",
+      "note": "Collected from the officiant directly."
     },
     {
       "key": "approving_judge_name",

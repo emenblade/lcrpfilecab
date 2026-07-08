@@ -8,6 +8,14 @@
     "defendant_name",
     "case_number"
   ],
+  "signers": [
+    {
+      "role": "judge",
+      "label": "Issuing Judge",
+      "requires_handoff": false,
+      "note": "This document is authored entirely by the judge — no separate filer role."
+    }
+  ],
   "notes": "Judge-authored document, like Order to Release — no separate citizen applicant role.",
   "fields": [
     {

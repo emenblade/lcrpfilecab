@@ -8,6 +8,31 @@
     "applicant_name",
     "agent_name"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "agent",
+      "label": "Health Care Agent",
+      "requires_handoff": true,
+      "name_field": "agent_name"
+    },
+    {
+      "role": "witness",
+      "label": "Witness",
+      "requires_handoff": true,
+      "name_field": "witness_name"
+    },
+    {
+      "role": "judge",
+      "label": "Approving Justice",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "applicant_name",
@@ -82,6 +107,15 @@
       "filled_by": "auto"
     },
     {
+      "key": "agent_signature",
+      "label": "Agent's Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "agent",
+      "note": "Collected from the agent directly, confirming they accept the role."
+    },
+    {
       "key": "witness_name",
       "label": "Witness Name",
       "prompt": "Who is witnessing this directive?",
@@ -104,6 +138,15 @@
       "type": "date",
       "required": true,
       "filled_by": "auto"
+    },
+    {
+      "key": "witness_signature",
+      "label": "Witness Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "witness",
+      "note": "Collected from the witness directly."
     },
     {
       "key": "approving_judge_name",

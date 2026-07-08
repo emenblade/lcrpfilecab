@@ -8,6 +8,19 @@
     "current_name",
     "requested_name"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "judge",
+      "label": "Approving Judge",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "current_name",

@@ -8,6 +8,25 @@
     "defendant_name",
     "case_number"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filing Officer",
+      "requires_handoff": false
+    },
+    {
+      "role": "defendant",
+      "label": "Defendant",
+      "requires_handoff": true,
+      "name_field": "defendant_name"
+    },
+    {
+      "role": "judge",
+      "label": "Approving Judge",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "defendant_name",
@@ -56,6 +75,15 @@
       "type": "date",
       "required": true,
       "filled_by": "auto"
+    },
+    {
+      "key": "defendant_signature",
+      "label": "Defendant Signature",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "defendant",
+      "note": "Collected from the defendant directly, not the filing officer."
     },
     {
       "key": "approving_judge_name",

@@ -6,7 +6,7 @@ errors = []
 all_json_keys_by_template = {}
 
 for json_path in sorted(glob.glob("*.json")):
-    if json_path == "package.json":
+    if json_path in ("package.json", "index.json"):
         continue
     with open(json_path) as f:
         manifest = json.load(f)
@@ -40,6 +40,33 @@ for json_path in sorted(glob.glob("*.json")):
     for field in manifest["fields"]:
         if field["key"].startswith("approving_judge") and field["filled_by"] not in ("judge",):
             errors.append(f"[{template_id}] approving_judge* field '{field['key']}' has filled_by={field['filled_by']!r}, expected 'judge'")
+
+    # signers roster: every field's filled_by must resolve to a known role,
+    # and every non-applicant/judge/auto role must be declared with requires_handoff
+    signers = manifest.get("signers")
+    if signers is None:
+        errors.append(f"[{template_id}] missing top-level 'signers' array")
+    else:
+        roles = {s["role"] for s in signers}
+        for s in signers:
+            for req_attr in ("role", "label", "requires_handoff"):
+                if req_attr not in s:
+                    errors.append(f"[{template_id}] signer entry missing '{req_attr}': {s}")
+            name_field = s.get("name_field")
+            if name_field and name_field not in json_keys:
+                errors.append(f"[{template_id}] signer '{s['role']}' name_field {name_field!r} is not a known field key")
+
+        for field in manifest["fields"]:
+            fb = field["filled_by"]
+            if fb == "auto":
+                continue
+            if fb not in roles:
+                errors.append(f"[{template_id}] field '{field['key']}' has filled_by={fb!r} with no matching entry in signers[]")
+
+        handoff_roles = {s["role"] for s in signers if s.get("requires_handoff")}
+        for role in handoff_roles:
+            if not any(f["filled_by"] == role for f in manifest["fields"]):
+                errors.append(f"[{template_id}] signer '{role}' has requires_handoff=true but no field uses filled_by={role!r}")
 
 print(f"Checked {len(all_json_keys_by_template)} templates.")
 if errors:

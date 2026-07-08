@@ -8,6 +8,19 @@
     "owner_name",
     "vehicle_vin_location"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "judge",
+      "label": "Approving LEO or Judiciary",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "owner_name",

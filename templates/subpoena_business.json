@@ -8,6 +8,20 @@
     "recipient_name",
     "recipient_business"
   ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false,
+      "note": "No dedicated requester field in this template — tracked by the filing session."
+    },
+    {
+      "role": "judge",
+      "label": "Approving Justice",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval — not part of the intake handoff flow."
+    }
+  ],
   "fields": [
     {
       "key": "recipient_name",
