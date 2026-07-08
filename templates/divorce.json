@@ -19,7 +19,7 @@
       "label": "Signing Party (Party One or Party Two)",
       "requires_handoff": true,
       "name_field": null,
-      "note": "Bot must confirm which of the two parties is signing, then route to them."
+      "note": "The 'signing_party' choice field selects which already-collected name (party_one_name or party_two_name) this refers to — route the handoff to that person."
     },
     {
       "role": "counsel",
@@ -93,12 +93,24 @@
       "filled_by": "applicant"
     },
     {
-      "key": "signing_party_name",
+      "key": "signing_party",
+      "label": "Either Party (Selection)",
+      "prompt": "Which party is signing to enact this dissolution — Party One or Party Two?",
+      "type": "choice",
+      "options": ["Party One", "Party Two"],
+      "required": true,
+      "filled_by": "applicant",
+      "html_rendered": false,
+      "note": "Selects which already-collected name (party_one_name or party_two_name) becomes the signing_party_signature. Not displayed on the document itself."
+    },
+    {
+      "key": "signing_party_signature",
       "label": "Either Party (Signing)",
-      "prompt": "Which party is signing to enact this dissolution?",
+      "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "signing_party"
+      "filled_by": "signing_party",
+      "note": "Value is whichever of party_one_name/party_two_name matches the 'signing_party' selection, confirmed by that person directly."
     },
     {
       "key": "signing_party_date",

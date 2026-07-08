@@ -22,8 +22,12 @@ for json_path in sorted(glob.glob("*.json")):
     json_keys = set(f["key"] for f in manifest["fields"])
     all_json_keys_by_template[template_id] = json_keys
 
+    # fields marked html_rendered:false drive another field's value (e.g. a
+    # "which party is signing" selector) rather than appearing as their own token
+    rendered_keys = set(f["key"] for f in manifest["fields"] if f.get("html_rendered", True))
+
     missing_in_json = html_tokens - json_keys
-    unused_in_html = json_keys - html_tokens
+    unused_in_html = rendered_keys - html_tokens
 
     if missing_in_json:
         errors.append(f"[{template_id}] tokens in HTML with no JSON field: {sorted(missing_in_json)}")
