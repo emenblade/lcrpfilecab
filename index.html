@@ -424,48 +424,6 @@
       color: var(--text-muted);
     }
 
-    /* ── TEMPLATES GRID ──────────────────────────────────────── */
-    .templates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1px;
-      background: var(--border-dim);
-      border: 1px solid var(--border-dim);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .template-card {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.1rem 1.4rem;
-      text-decoration: none;
-      background: var(--bg-base);
-      transition: background 0.15s;
-    }
-    .template-card:hover { background: var(--bg-card); }
-    .template-icon {
-      flex-shrink: 0;
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--gold-pale);
-      border: 1px solid rgba(200, 130, 26, 0.18);
-      border-radius: 2px;
-      color: var(--gold);
-    }
-    .template-name {
-      flex: 1;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.4;
-      transition: color 0.15s;
-    }
-    .template-card:hover .template-name { color: var(--text-primary); }
 
     /* ── LOADING ─────────────────────────────────────────────── */
     .doc-loading {
@@ -522,7 +480,6 @@
       .nav-hamburger { display: flex; }
       .hero { padding: 70px 1.5rem 50px; }
       .docs-inner { padding: 3rem 1.5rem 5rem; gap: 3.5rem; }
-      .templates-grid { grid-template-columns: 1fr; }
       .filing-item { padding: 1rem 1.25rem; gap: 1rem; flex-wrap: wrap; }
     }
   </style>
@@ -538,7 +495,6 @@
   <ul class="nav-links">
     <li><a href="#search">Search</a></li>
     <li><a href="#filings">Filings</a></li>
-    <li><a href="#templates">Templates</a></li>
     <li><a href="#" class="btn-discord-nav" id="discord-nav">Join Discord</a></li>
   </ul>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -550,7 +506,6 @@
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
   <a href="#search">Search</a>
   <a href="#filings">Filings</a>
-  <a href="#templates">Templates</a>
   <a href="#" class="btn-discord-mobile" id="discord-mobile">Join Discord</a>
 </div>
 
@@ -608,16 +563,11 @@
     document.getElementById('discord-nav').href    = DISCORD_URL;
     document.getElementById('discord-mobile').href = DISCORD_URL;
 
-    let templates = [];
     let filings = [];
 
     try {
-      const [tRes, fRes] = await Promise.all([
-        fetch('templates/index.json'),
-        fetch('filings-index.json?v=' + Date.now()),
-      ]);
-      templates = await tRes.json();
-      filings   = await fRes.json();
+      const fRes = await fetch('filings-index.json?v=' + Date.now());
+      filings = await fRes.json();
     } catch (e) {
       console.error('Failed to load index', e);
       document.getElementById('docs-inner').innerHTML =
@@ -626,13 +576,13 @@
     }
 
     document.getElementById('search-hint').textContent =
-      `${filings.length} filing${filings.length === 1 ? '' : 's'} on record · ${templates.length} document types`;
+      `${filings.length} filing${filings.length === 1 ? '' : 's'} on record`;
 
     const container = document.getElementById('docs-inner');
     container.innerHTML = '';
 
     // ── CATEGORIES ──────────────────────────────────────────
-    const categories = [...new Set([...templates, ...filings].map(x => x.category))].sort();
+    const categories = [...new Set(filings.map(x => x.category))].sort();
     let activeCategory = null;
 
     const categorySection = document.createElement('section');
@@ -718,42 +668,6 @@
 
     renderCategories();
     renderFilings();
-
-    // ── TEMPLATES ─────────────────────────────────────────────
-    const templatesSection = document.createElement('section');
-    templatesSection.id = 'templates';
-    templatesSection.innerHTML = `
-      <p class="section-eyebrow">Resources</p>
-      <h2 class="section-heading">Available Document Types</h2>
-      <div class="section-rule"></div>
-      <p class="section-note">These are the blank forms the DOJ bot can file on your behalf &mdash; they are not editable here.</p>
-      <div class="templates-grid" id="templates-grid"></div>
-    `;
-    container.appendChild(templatesSection);
-    const grid = templatesSection.querySelector('#templates-grid');
-
-    if (!templates.length) {
-      grid.innerHTML = '<div class="list-empty">No templates on file</div>';
-    } else {
-      templates.forEach(t => {
-        const a = document.createElement('a');
-        a.className = 'template-card';
-        a.href      = `templates/${t.html_file}`;
-        a.innerHTML = `
-          <div class="template-icon">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
-            </svg>
-          </div>
-          <span class="template-name">${escHtml(t.title)}</span>
-        `;
-        grid.appendChild(a);
-      });
-    }
 
     function escHtml(str) {
       return String(str)
