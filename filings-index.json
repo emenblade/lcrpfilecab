@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "filing_id": "arrest_warrant-2026-0001",
+    "template_id": "arrest_warrant",
+    "title": "Warrant of Arrest",
+    "category": "Warrants & Orders",
+    "url": "filings/arrest_warrant/arrest_warrant-2026-0001.html",
+    "filed_date": "2026-07-08",
+    "signed_date": "2026-07-08",
+    "signed_by": "Keith Jamieson",
+    "index_values": {
+      "defendant_name": "Furious Fireball Franklin",
+      "charges": "§69420 looking way too hot in public."
+    },
+    "search_text": "warrant of arrest arrest_warrant-2026-0001 furious fireball franklin §69420 looking way too hot in public. keith jamieson"
+  }
+]
