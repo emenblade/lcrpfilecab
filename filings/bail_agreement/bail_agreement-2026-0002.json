@@ -1,0 +1,14 @@
+{
+  "filing_id": "bail_agreement-2026-0002",
+  "template_id": "bail_agreement",
+  "title": "Bail Agreement",
+  "category": "Warrants & Orders",
+  "html_file": "bail_agreement/bail_agreement-2026-0002.html",
+  "filed_date": "2026-07-07",
+  "signed_date": "2026-07-07",
+  "signed_by": "billy bob",
+  "index_values": {
+    "defendant_name": "frank quick fire",
+    "case_number": "70320"
+  }
+}
