@@ -116,7 +116,7 @@
     {
       "key": "party_one_signature",
       "label": "Party One's Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature on this marriage licence.",
       "type": "signature",
       "required": true,
       "filled_by": "party_one",
@@ -133,7 +133,7 @@
     {
       "key": "party_two_signature",
       "label": "Party Two's Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature on this marriage licence.",
       "type": "signature",
       "required": true,
       "filled_by": "party_two",
@@ -150,7 +150,7 @@
     {
       "key": "officiant_signature",
       "label": "Officiant Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature officiating this marriage.",
       "type": "signature",
       "required": true,
       "filled_by": "officiant",

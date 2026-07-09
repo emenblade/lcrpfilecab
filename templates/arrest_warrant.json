@@ -49,7 +49,7 @@
     {
       "key": "issuing_officer_name",
       "label": "Signed",
-      "prompt": null,
+      "prompt": "What is your name? (the officer issuing this warrant)",
       "type": "signature",
       "required": true,
       "filled_by": "applicant",

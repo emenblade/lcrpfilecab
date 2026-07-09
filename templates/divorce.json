@@ -97,7 +97,10 @@
       "label": "Either Party (Selection)",
       "prompt": "Which party is signing to enact this dissolution — Party One or Party Two?",
       "type": "choice",
-      "options": ["Party One", "Party Two"],
+      "options": [
+        "Party One",
+        "Party Two"
+      ],
       "required": true,
       "filled_by": "applicant",
       "html_rendered": false,
@@ -106,7 +109,7 @@
     {
       "key": "signing_party_signature",
       "label": "Either Party (Signing)",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature enacting this dissolution.",
       "type": "signature",
       "required": true,
       "filled_by": "signing_party",
@@ -131,7 +134,7 @@
     {
       "key": "counsel_signature",
       "label": "Counsel Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature as counsel for this divorce.",
       "type": "signature",
       "required": false,
       "filled_by": "counsel",

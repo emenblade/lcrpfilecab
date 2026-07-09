@@ -72,7 +72,7 @@
     {
       "key": "counsel_signature",
       "label": "Counsel Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature taking this affidavit.",
       "type": "signature",
       "required": true,
       "filled_by": "counsel"
@@ -80,7 +80,7 @@
     {
       "key": "affiant_signature",
       "label": "Affiant Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature on this sworn statement.",
       "type": "signature",
       "required": true,
       "filled_by": "affiant"

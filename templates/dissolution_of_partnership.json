@@ -221,7 +221,7 @@
     {
       "key": "partner1_signature",
       "label": "Partner 1 Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature on this dissolution agreement.",
       "type": "signature",
       "required": true,
       "filled_by": "partner1",
@@ -238,7 +238,7 @@
     {
       "key": "partner2_signature",
       "label": "Partner 2 Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature on this dissolution agreement.",
       "type": "signature",
       "required": true,
       "filled_by": "partner2",

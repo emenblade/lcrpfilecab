@@ -79,7 +79,7 @@
     {
       "key": "defendant_signature",
       "label": "Defendant Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature on this bail agreement.",
       "type": "signature",
       "required": true,
       "filled_by": "defendant",

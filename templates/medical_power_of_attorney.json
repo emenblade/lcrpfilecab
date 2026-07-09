@@ -109,7 +109,7 @@
     {
       "key": "agent_signature",
       "label": "Agent's Signature",
-      "prompt": null,
+      "prompt": "Please confirm you accept this role, and provide your full name to serve as your signature.",
       "type": "signature",
       "required": true,
       "filled_by": "agent",
@@ -142,7 +142,7 @@
     {
       "key": "witness_signature",
       "label": "Witness Signature",
-      "prompt": null,
+      "prompt": "Please confirm your full name to serve as your signature witnessing this directive.",
       "type": "signature",
       "required": true,
       "filled_by": "witness",
