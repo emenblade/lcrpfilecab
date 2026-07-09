@@ -1,0 +1,14 @@
+{
+  "filing_id": "arrest_warrant-2026-0003",
+  "template_id": "arrest_warrant",
+  "title": "Warrant of Arrest",
+  "category": "Warrants & Orders",
+  "html_file": "arrest_warrant/arrest_warrant-2026-0003.html",
+  "filed_date": "2026-07-09",
+  "signed_date": "2026-07-09",
+  "signed_by": "Judge bubblegum",
+  "index_values": {
+    "defendant_name": "Broski con broski",
+    "charges": "Walking while chewing gum mainly."
+  }
+}
