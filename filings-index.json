@@ -61,6 +61,22 @@
     "search_text": "business partnership agreement business_partnership-2026-0002 emen and gabu gabu emen judge emenblade"
   },
   {
+    "filing_id": "business_partnership-2026-0003",
+    "template_id": "business_partnership",
+    "title": "Business Partnership Agreement",
+    "category": "Business Filings",
+    "url": "filings/business_partnership/business_partnership-2026-0003.html",
+    "filed_date": "2026-07-09",
+    "signed_date": "2026-07-09",
+    "signed_by": "Judge Jamieson",
+    "index_values": {
+      "business_name": "JM&KJ",
+      "partner1_name": "Jean Moonie",
+      "partner2_name": "Keith Jamieson"
+    },
+    "search_text": "business partnership agreement business_partnership-2026-0003 jm&kj jean moonie keith jamieson judge jamieson"
+  },
+  {
     "filing_id": "dissolution_of_partnership-2026-0002",
     "template_id": "dissolution_of_partnership",
     "title": "Dissolution of Business Partnership Agreement",
