@@ -14,7 +14,6 @@ WIDTH = 820
 TALL_HEIGHT = 4500
 PADDING = 40
 
-os.makedirs(f"{REPO}/templates/previews", exist_ok=True)
 os.makedirs("/tmp/blank_render", exist_ok=True)
 
 server = subprocess.Popen(
@@ -66,7 +65,7 @@ try:
 
         crop_h = min(h, last_content_row + PADDING)
         cropped = im.crop((0, 0, w, crop_h))
-        out_path = f"{REPO}/templates/previews/{tid}.png"
+        out_path = f"{REPO}/templates/{tid}.png"
         cropped.save(out_path)
         print(f"{tid}: {w}x{crop_h} -> {out_path}")
 finally:
