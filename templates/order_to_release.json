@@ -10,21 +10,20 @@
   ],
   "signers": [
     {
-      "role": "judge",
+      "role": "applicant",
       "label": "Issuing Judge",
-      "requires_handoff": false,
-      "note": "This document is authored entirely by the judge — no separate filer role."
+      "requires_handoff": false
     }
   ],
-  "notes": "Unlike most templates, this whole document is authored by the presiding judge/justice — there is no separate citizen applicant. All fields are filled_by \"judge\" except the auto-filled date.",
+  "notes": "Unlike most templates, this whole document is authored by the presiding judge/justice directly — there is no separate citizen applicant, so the judge running the command fills every field as \"applicant\" except the auto-filled date.",
   "fields": [
     {
-      "key": "approving_judge_name",
+      "key": "issuing_judge_name",
       "label": "Chambers of / Signature",
       "prompt": "Which judge/justice is issuing this order?",
       "type": "signature",
       "required": true,
-      "filled_by": "judge",
+      "filled_by": "applicant",
       "note": "Appears twice: plain text in the 'Chambers of' header, cursive-rendered in the signature block. Same value both places."
     },
     {
@@ -33,7 +32,7 @@
       "prompt": "What is the SC-DOJ order number?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "date_filed",
@@ -49,7 +48,7 @@
       "prompt": "Provide a one-line summary of this order.",
       "type": "text",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "overview",
@@ -57,7 +56,7 @@
       "prompt": "Provide the full overview/rationale for this order.",
       "type": "text",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "release_subject_name",
@@ -65,15 +64,15 @@
       "prompt": "Who is being ordered released from Bollingbrook?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
-      "key": "approving_judge_title",
+      "key": "issuing_judge_title",
       "label": "Judge's Title",
       "prompt": "What is the issuing judge's title/rank?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     }
   ]
 }

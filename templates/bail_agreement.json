@@ -79,11 +79,11 @@
     {
       "key": "defendant_signature",
       "label": "Defendant Signature",
-      "prompt": "Please confirm your full name to serve as your signature on this bail agreement.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "defendant",
-      "note": "Collected from the defendant directly, not the filing officer."
+      "note": "Collected from the defendant directly, not the filing officer. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "approving_judge_name",

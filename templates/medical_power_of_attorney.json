@@ -109,11 +109,11 @@
     {
       "key": "agent_signature",
       "label": "Agent's Signature",
-      "prompt": "Please confirm you accept this role, and provide your full name to serve as your signature.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "agent",
-      "note": "Collected from the agent directly, confirming they accept the role."
+      "note": "Collected from the agent directly, confirming they accept the role. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "witness_name",
@@ -142,11 +142,11 @@
     {
       "key": "witness_signature",
       "label": "Witness Signature",
-      "prompt": "Please confirm your full name to serve as your signature witnessing this directive.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "witness",
-      "note": "Collected from the witness directly."
+      "note": "Collected from the witness directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "approving_judge_name",

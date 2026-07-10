@@ -116,11 +116,11 @@
     {
       "key": "party_one_signature",
       "label": "Party One's Signature",
-      "prompt": "Please confirm your full name to serve as your signature on this marriage licence.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "party_one",
-      "note": "Collected from Party One directly."
+      "note": "Collected from Party One directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "party_two_signed_date",
@@ -133,11 +133,11 @@
     {
       "key": "party_two_signature",
       "label": "Party Two's Signature",
-      "prompt": "Please confirm your full name to serve as your signature on this marriage licence.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "party_two",
-      "note": "Collected from Party Two directly."
+      "note": "Collected from Party Two directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "officiant_signed_date",
@@ -150,11 +150,11 @@
     {
       "key": "officiant_signature",
       "label": "Officiant Signature",
-      "prompt": "Please confirm your full name to serve as your signature officiating this marriage.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "officiant",
-      "note": "Collected from the officiant directly."
+      "note": "Collected from the officiant directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "approving_judge_name",

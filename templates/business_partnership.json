@@ -119,11 +119,11 @@
     {
       "key": "partner1_signature",
       "label": "Partner 1 Signature",
-      "prompt": "Please confirm your full name to serve as your signature on this partnership agreement.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "partner1",
-      "note": "Collected from Partner 1 directly."
+      "note": "Collected from Partner 1 directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "partner2_signed_date",
@@ -136,11 +136,11 @@
     {
       "key": "partner2_signature",
       "label": "Partner 2 Signature",
-      "prompt": "Please confirm your full name to serve as your signature on this partnership agreement.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "partner2",
-      "note": "Collected from Partner 2 directly."
+      "note": "Collected from Partner 2 directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "approving_judge_name",

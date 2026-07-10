@@ -72,18 +72,20 @@
     {
       "key": "counsel_signature",
       "label": "Counsel Signature",
-      "prompt": "Please confirm your full name to serve as your signature taking this affidavit.",
+      "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "counsel"
+      "filled_by": "counsel",
+      "note": "Collected from counsel directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "affiant_signature",
       "label": "Affiant Signature",
-      "prompt": "Please confirm your full name to serve as your signature on this sworn statement.",
+      "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "affiant"
+      "filled_by": "affiant",
+      "note": "Collected from affiant directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     }
   ]
 }

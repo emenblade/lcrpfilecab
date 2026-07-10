@@ -10,21 +10,20 @@
   ],
   "signers": [
     {
-      "role": "judge",
+      "role": "applicant",
       "label": "Issuing Judge",
-      "requires_handoff": false,
-      "note": "This document is authored entirely by the judge — no separate filer role."
+      "requires_handoff": false
     }
   ],
   "notes": "Judge-authored document, like Order to Release — no separate citizen applicant role.",
   "fields": [
     {
-      "key": "approving_judge_name",
+      "key": "issuing_judge_name",
       "label": "Chambers of / Signature",
       "prompt": "Which judge/justice is issuing this warrant?",
       "type": "signature",
       "required": true,
-      "filled_by": "judge",
+      "filled_by": "applicant",
       "note": "Appears in the 'Chambers of' header (plain) and the signature block (cursive)."
     },
     {
@@ -33,7 +32,7 @@
       "prompt": "What is the case number?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "case_name",
@@ -41,7 +40,7 @@
       "prompt": "What is the case name (e.g. State v. Defendant)?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "defendant_name",
@@ -49,7 +48,7 @@
       "prompt": "Who is the defendant?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "defendant_ssn",
@@ -57,7 +56,7 @@
       "prompt": "What is the defendant's SSN?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "trial_date",
@@ -65,7 +64,7 @@
       "prompt": "What date was the trial held?",
       "type": "date",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "charge",
@@ -73,7 +72,7 @@
       "prompt": "What charge was the defendant found guilty of?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "capital_punishment_order_number",
@@ -81,7 +80,7 @@
       "prompt": "What is the SC-DOJ Capital Punishment order number?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "appeals_start_time",
@@ -89,7 +88,7 @@
       "prompt": "When does the appeals period begin?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "appeals_expire_time",
@@ -97,7 +96,7 @@
       "prompt": "When does the appeals period expire?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "prep_start_time",
@@ -105,7 +104,7 @@
       "prompt": "When does the Department of Corrections' preparation period begin?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
       "key": "execution_earliest_time",
@@ -113,15 +112,15 @@
       "prompt": "What is the earliest the execution may take place?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     },
     {
-      "key": "approving_judge_title",
+      "key": "issuing_judge_title",
       "label": "Judge's Rank",
       "prompt": "What is the issuing judge's rank?",
       "type": "string",
       "required": true,
-      "filled_by": "judge"
+      "filled_by": "applicant"
     }
   ]
 }

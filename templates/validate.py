@@ -72,6 +72,18 @@ for json_path in sorted(glob.glob("*.json")):
             if not any(f["filled_by"] == role for f in manifest["fields"]):
                 errors.append(f"[{template_id}] signer '{role}' has requires_handoff=true but no field uses filled_by={role!r}")
 
+    # Only "applicant" fields are asked during intake, so only they should have
+    # a prompt. "auto"/"judge" fields are filled automatically; every handoff
+    # role (partner1, witness, counsel, ...) is filled later by the separate
+    # document hand-off/signature-routing system, not asked of the filer.
+    for field in manifest["fields"]:
+        fb = field["filled_by"]
+        has_prompt = field.get("prompt") is not None
+        if fb == "applicant" and not has_prompt:
+            errors.append(f"[{template_id}] field '{field['key']}' is filled_by='applicant' but has no prompt")
+        if fb != "applicant" and has_prompt:
+            errors.append(f"[{template_id}] field '{field['key']}' has filled_by={fb!r} but has a prompt (should be null -- only 'applicant' fields are asked during intake)")
+
 print(f"Checked {len(all_json_keys_by_template)} templates.")
 if errors:
     print(f"\n{len(errors)} issue(s) found:\n")

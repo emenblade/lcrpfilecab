@@ -109,11 +109,11 @@
     {
       "key": "signing_party_signature",
       "label": "Either Party (Signing)",
-      "prompt": "Please confirm your full name to serve as your signature enacting this dissolution.",
+      "prompt": null,
       "type": "signature",
       "required": true,
       "filled_by": "signing_party",
-      "note": "Value is whichever of party_one_name/party_two_name matches the 'signing_party' selection, confirmed by that person directly."
+      "note": "Value is whichever of party_one_name/party_two_name matches the 'signing_party' selection, confirmed by that person directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "signing_party_date",
@@ -134,11 +134,11 @@
     {
       "key": "counsel_signature",
       "label": "Counsel Signature",
-      "prompt": "Please confirm your full name to serve as your signature as counsel for this divorce.",
+      "prompt": null,
       "type": "signature",
       "required": false,
       "filled_by": "counsel",
-      "note": "Collected from counsel directly. Only applicable if counsel_name was provided."
+      "note": "Collected from counsel directly. Filled via the separate document hand-off/signature-routing system after the filer submits -- not asked during intake."
     },
     {
       "key": "approving_judge_name",
