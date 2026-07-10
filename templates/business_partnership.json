@@ -71,17 +71,17 @@
     {
       "key": "partner1_cid",
       "label": "Partner 1 CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is Partner 1's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
       "key": "partner1_address",
       "label": "Partner 1 Address",
-      "prompt": "What is Partner 1's address?",
+      "prompt": "What is Partner 1's address? (Answer \"Unknown\" if you don't have it.)",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -95,17 +95,17 @@
     {
       "key": "partner2_cid",
       "label": "Partner 2 CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is Partner 2's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
       "key": "partner2_address",
       "label": "Partner 2 Address",
-      "prompt": "What is Partner 2's address?",
+      "prompt": "What is Partner 2's address? (Answer \"Unknown\" if you don't have it.)",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {

@@ -71,17 +71,17 @@
     {
       "key": "partner1_cid",
       "label": "Partner 1 CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is Partner 1's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
       "key": "partner1_address",
       "label": "Partner 1 Address",
-      "prompt": "What is Partner 1's address?",
+      "prompt": "What is Partner 1's address? (Answer \"Unknown\" if you don't have it.)",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -95,17 +95,17 @@
     {
       "key": "partner2_cid",
       "label": "Partner 2 CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is Partner 2's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
       "key": "partner2_address",
       "label": "Partner 2 Address",
-      "prompt": "What is Partner 2's address?",
+      "prompt": "What is Partner 2's address? (Answer \"Unknown\" if you don't have it.)",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -149,7 +149,10 @@
       ],
       "required": true,
       "filled_by": "applicant",
-      "depends_on": { "field": "cessation_basis", "equals": "Involuntary Withdrawal" },
+      "depends_on": {
+        "field": "cessation_basis",
+        "equals": "Involuntary Withdrawal"
+      },
       "skip_value": "N/A"
     },
     {
@@ -172,7 +175,10 @@
       ],
       "required": true,
       "filled_by": "applicant",
-      "depends_on": { "field": "cessation_basis", "equals": "Dissolution" },
+      "depends_on": {
+        "field": "cessation_basis",
+        "equals": "Dissolution"
+      },
       "skip_value": "N/A"
     },
     {
@@ -182,27 +188,36 @@
       "type": "string",
       "required": true,
       "filled_by": "applicant",
-      "depends_on": { "field": "dissolution_type", "equals": "Sold to a New Partner" },
+      "depends_on": {
+        "field": "dissolution_type",
+        "equals": "Sold to a New Partner"
+      },
       "skip_value": "N/A"
     },
     {
       "key": "new_partner_cid",
       "label": "New Partner CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is the new partner's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant",
-      "depends_on": { "field": "dissolution_type", "equals": "Sold to a New Partner" },
+      "depends_on": {
+        "field": "dissolution_type",
+        "equals": "Sold to a New Partner"
+      },
       "skip_value": "N/A"
     },
     {
       "key": "new_partner_address",
       "label": "New Partner Address",
-      "prompt": "What is the new partner's address?",
+      "prompt": "What is the new partner's address? (Answer \"Unknown\" if you don't have it.)",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant",
-      "depends_on": { "field": "dissolution_type", "equals": "Sold to a New Partner" },
+      "depends_on": {
+        "field": "dissolution_type",
+        "equals": "Sold to a New Partner"
+      },
       "skip_value": "N/A"
     },
     {
