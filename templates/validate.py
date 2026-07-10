@@ -84,6 +84,27 @@ for json_path in sorted(glob.glob("*.json")):
         if fb != "applicant" and has_prompt:
             errors.append(f"[{template_id}] field '{field['key']}' has filled_by={fb!r} but has a prompt (should be null -- only 'applicant' fields are asked during intake)")
 
+    # depends_on/skip_value: a field only gets asked if an earlier field's
+    # answer matches; otherwise the bot fills skip_value without asking.
+    fields_by_key = {f["key"]: f for f in manifest["fields"]}
+    for field in manifest["fields"]:
+        depends_on = field.get("depends_on")
+        if depends_on is None:
+            continue
+        if "skip_value" not in field:
+            errors.append(f"[{template_id}] field '{field['key']}' has depends_on but no skip_value")
+        dep_field_key = depends_on.get("field")
+        dep_field = fields_by_key.get(dep_field_key)
+        if dep_field is None:
+            errors.append(f"[{template_id}] field '{field['key']}' depends_on unknown field {dep_field_key!r}")
+            continue
+        dep_value = depends_on.get("equals")
+        if dep_field.get("type") == "choice" and dep_value not in dep_field.get("options", []):
+            errors.append(
+                f"[{template_id}] field '{field['key']}' depends_on {dep_field_key}=={dep_value!r}, "
+                f"but {dep_value!r} is not one of {dep_field_key}'s options {dep_field.get('options')}"
+            )
+
 print(f"Checked {len(all_json_keys_by_template)} templates.")
 if errors:
     print(f"\n{len(errors)} issue(s) found:\n")

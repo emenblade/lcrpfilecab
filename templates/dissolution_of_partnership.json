@@ -111,7 +111,7 @@
     {
       "key": "requesting_partner",
       "label": "Requesting Partner",
-      "prompt": "Which partner is requesting this dissolution?",
+      "prompt": "Which partner is requesting this dissolution — Partner 1, Partner 2, or Both Partners?",
       "type": "choice",
       "options": [
         "Partner 1",
@@ -124,7 +124,7 @@
     {
       "key": "cessation_basis",
       "label": "Cessation Basis",
-      "prompt": "Is this partnership ceasing due to voluntary withdrawal, involuntary withdrawal, or dissolution?",
+      "prompt": "Why is this partnership ending? Choose one: Voluntary Withdrawal (a partner is choosing to leave), Involuntary Withdrawal (a partner is being removed — e.g. death, incapacity, misconduct), or Dissolution (the business itself is closing).",
       "type": "choice",
       "options": [
         "Voluntary Withdrawal",
@@ -137,19 +137,20 @@
     {
       "key": "involuntary_withdrawal_reason",
       "label": "Involuntary Withdrawal Reason",
-      "prompt": "If involuntary withdrawal, what is the reason?",
+      "prompt": "What is the reason for the involuntary withdrawal? Choose one: Death of a Partner, Partner Incapacitated, Incompetence or Negligence, Breach of Fiduciary Duties, Criminal or Civil Judgment, or Other Breach of Agreement.",
       "type": "choice",
       "options": [
         "Death of a Partner",
-        "Partner incapacitated",
-        "Incompetence or negligence",
-        "Breach of fiduciary duties",
-        "Criminal or civil judgment",
-        "Other breach of Agreement"
+        "Partner Incapacitated",
+        "Incompetence or Negligence",
+        "Breach of Fiduciary Duties",
+        "Criminal or Civil Judgment",
+        "Other Breach of Agreement"
       ],
-      "required": false,
+      "required": true,
       "filled_by": "applicant",
-      "note": "Only relevant if cessation_basis is \"Involuntary Withdrawal\"."
+      "depends_on": { "field": "cessation_basis", "equals": "Involuntary Withdrawal" },
+      "skip_value": "N/A"
     },
     {
       "key": "further_details",
@@ -162,53 +163,47 @@
     {
       "key": "dissolution_type",
       "label": "Dissolution Type",
-      "prompt": "If this is a dissolution, which type applies?",
+      "prompt": "Which type of dissolution is this? Choose one: Single Owner Operation (the business continues under one remaining partner), Sold to a New Partner (ownership transfers to someone new), or Business Will Cease to Operate (the business shuts down entirely).",
       "type": "choice",
       "options": [
-        "Single owner operation",
-        "Sold to a new Partner",
-        "Business will cease to operate"
-      ],
-      "required": false,
-      "filled_by": "applicant",
-      "note": "Only relevant if cessation_basis is \"Dissolution\"."
-    },
-    {
-      "key": "is_sold_to_new_partner",
-      "label": "Sold to New Partner?",
-      "prompt": "Will the partnership be sold to a new partner?",
-      "type": "choice",
-      "options": [
-        "Yes",
-        "No"
+        "Single Owner Operation",
+        "Sold to a New Partner",
+        "Business Will Cease to Operate"
       ],
       "required": true,
-      "filled_by": "applicant"
+      "filled_by": "applicant",
+      "depends_on": { "field": "cessation_basis", "equals": "Dissolution" },
+      "skip_value": "N/A"
     },
     {
       "key": "new_partner_name",
       "label": "New Partner Name",
       "prompt": "What is the new partner's full name?",
       "type": "string",
-      "required": false,
+      "required": true,
       "filled_by": "applicant",
-      "note": "Only relevant if is_sold_to_new_partner is \"Yes\"."
+      "depends_on": { "field": "dissolution_type", "equals": "Sold to a New Partner" },
+      "skip_value": "N/A"
     },
     {
       "key": "new_partner_cid",
       "label": "New Partner CID",
       "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
-      "required": false,
-      "filled_by": "applicant"
+      "required": true,
+      "filled_by": "applicant",
+      "depends_on": { "field": "dissolution_type", "equals": "Sold to a New Partner" },
+      "skip_value": "N/A"
     },
     {
       "key": "new_partner_address",
       "label": "New Partner Address",
       "prompt": "What is the new partner's address?",
       "type": "string",
-      "required": false,
-      "filled_by": "applicant"
+      "required": true,
+      "filled_by": "applicant",
+      "depends_on": { "field": "dissolution_type", "equals": "Sold to a New Partner" },
+      "skip_value": "N/A"
     },
     {
       "key": "partner1_signed_date",
