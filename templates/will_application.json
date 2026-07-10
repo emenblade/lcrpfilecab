@@ -71,26 +71,30 @@
       "label": "Spouse's Name",
       "prompt": "What is your spouse's name?",
       "type": "string",
-      "required": false,
+      "required": true,
       "filled_by": "applicant",
-      "note": "Only relevant if is_married is \"Married\"."
+      "depends_on": { "field": "is_married", "equals": "Married" },
+      "skip_value": "N/A"
     },
     {
       "key": "fallback_poa_name",
       "label": "Fallback Power of Attorney",
-      "prompt": "If you are not married, who should receive power of attorney over your estate?",
+      "prompt": "Who should receive power of attorney over your estate if you pass?",
       "type": "string",
-      "required": false,
+      "required": true,
       "filled_by": "applicant",
-      "note": "Only relevant if is_married is \"Not Married\"."
+      "depends_on": { "field": "is_married", "equals": "Not Married" },
+      "skip_value": "N/A"
     },
     {
       "key": "fallback_poa_cid",
       "label": "Fallback POA CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is that person's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
       "type": "string",
       "required": false,
-      "filled_by": "applicant"
+      "filled_by": "applicant",
+      "depends_on": { "field": "is_married", "equals": "Not Married" },
+      "skip_value": "N/A"
     },
     {
       "key": "asset_list",

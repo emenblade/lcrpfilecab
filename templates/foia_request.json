@@ -25,7 +25,7 @@
     {
       "key": "request_type",
       "label": "Type of Request",
-      "prompt": "What type of FOIA request is this?",
+      "prompt": "What type of request is this? Choose one: Personal Criminal Record, Other Individual's Details - Background Check, Report Details, Business Background Check, or Civil Case Information.",
       "type": "choice",
       "options": [
         "Personal Criminal Record",

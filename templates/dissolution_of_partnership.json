@@ -71,7 +71,7 @@
     {
       "key": "partner1_cid",
       "label": "Partner 1 CID",
-      "prompt": "What is Partner 1's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
+      "prompt": "What is Partner 1's CID? If this is you, run /cid in city — it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
       "required": false,
       "filled_by": "applicant"
@@ -95,7 +95,7 @@
     {
       "key": "partner2_cid",
       "label": "Partner 2 CID",
-      "prompt": "What is Partner 2's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
+      "prompt": "What is Partner 2's CID? If this is you, run /cid in city — it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
       "required": false,
       "filled_by": "applicant"
@@ -197,7 +197,7 @@
     {
       "key": "new_partner_cid",
       "label": "New Partner CID",
-      "prompt": "What is the new partner's CID? If this is you, run /cid in city -- it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
+      "prompt": "What is the new partner's CID? If this is you, run /cid in city — it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
       "required": false,
       "filled_by": "applicant",

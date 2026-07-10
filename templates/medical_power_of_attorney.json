@@ -77,9 +77,9 @@
     {
       "key": "agent_cid",
       "label": "Agent CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is your agent's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -93,7 +93,7 @@
     {
       "key": "alternative_agent_cid",
       "label": "Alternative Agent CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is your alternative agent's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
       "type": "string",
       "required": false,
       "filled_by": "applicant"
@@ -126,9 +126,9 @@
     {
       "key": "witness_cid",
       "label": "Witness CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is the witness's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {

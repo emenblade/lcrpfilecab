@@ -81,7 +81,7 @@
     {
       "key": "supporting_documents",
       "label": "Supporting Documents",
-      "prompt": "List any supporting documents attached.",
+      "prompt": "List any supporting documents attached (or answer \"None\").",
       "type": "text",
       "required": false,
       "filled_by": "applicant"

@@ -20,7 +20,7 @@
     {
       "key": "issuing_judge_name",
       "label": "Chambers of / Signature",
-      "prompt": "Which judge/justice is issuing this order?",
+      "prompt": "What is your name? You're the judge/justice issuing this order, so this becomes your signature.",
       "type": "signature",
       "required": true,
       "filled_by": "applicant",
@@ -69,7 +69,7 @@
     {
       "key": "issuing_judge_title",
       "label": "Judge's Title",
-      "prompt": "What is the issuing judge's title/rank?",
+      "prompt": "What is your title or rank?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"

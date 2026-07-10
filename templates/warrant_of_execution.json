@@ -20,7 +20,7 @@
     {
       "key": "issuing_judge_name",
       "label": "Chambers of / Signature",
-      "prompt": "Which judge/justice is issuing this warrant?",
+      "prompt": "What is your name? You're the judge/justice issuing this warrant, so this becomes your signature.",
       "type": "signature",
       "required": true,
       "filled_by": "applicant",
@@ -53,9 +53,9 @@
     {
       "key": "defendant_cid",
       "label": "Defendant CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is the defendant's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -117,7 +117,7 @@
     {
       "key": "issuing_judge_title",
       "label": "Judge's Rank",
-      "prompt": "What is the issuing judge's rank?",
+      "prompt": "What is your rank?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"

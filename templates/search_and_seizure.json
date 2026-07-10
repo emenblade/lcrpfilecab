@@ -25,7 +25,7 @@
     {
       "key": "petitioner",
       "label": "Petitioner",
-      "prompt": "Who is petitioning for this search/seizure?",
+      "prompt": "Who is the petitioner on record (usually the State, e.g. \"The State of San Andreas\")?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -33,7 +33,7 @@
     {
       "key": "requested_by",
       "label": "Requested By",
-      "prompt": "Who is requesting this warrant?",
+      "prompt": "What is your name and role — you're the one requesting this warrant?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -41,7 +41,7 @@
     {
       "key": "enforced_against",
       "label": "To Be Enforced Against",
-      "prompt": "Who/what is this warrant to be enforced against?",
+      "prompt": "Who or what is this warrant being enforced against — the person or property being searched?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -73,7 +73,7 @@
     {
       "key": "affidavit_reason",
       "label": "Reason for Affidavit",
-      "prompt": "Why are you applying for this search/seizure warrant?",
+      "prompt": "In general terms, why are you seeking this warrant?",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -97,7 +97,7 @@
     {
       "key": "supporting_documents",
       "label": "Supporting Documents",
-      "prompt": "List any supporting documents attached.",
+      "prompt": "List any supporting documents attached (or answer \"None\").",
       "type": "text",
       "required": false,
       "filled_by": "applicant"
@@ -105,7 +105,7 @@
     {
       "key": "warrant_purpose",
       "label": "Warrant Purpose",
-      "prompt": "What specifically are you applying for this search warrant to cover?",
+      "prompt": "Specifically, what do you want this warrant to authorize (e.g. \"search the residence for a firearm\")?",
       "type": "text",
       "required": true,
       "filled_by": "applicant"

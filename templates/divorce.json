@@ -47,9 +47,9 @@
     {
       "key": "party_one_cid",
       "label": "Party One CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is Party One's CID? If this is you, run /cid in city — it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -63,9 +63,9 @@
     {
       "key": "party_two_cid",
       "label": "Party Two CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is Party Two's CID? If this is you, run /cid in city — it copies your CID to your clipboard, paste it here. If you don't have it, answer \"Unknown\".",
       "type": "string",
-      "required": true,
+      "required": false,
       "filled_by": "applicant"
     },
     {
@@ -79,7 +79,7 @@
     {
       "key": "counsel_cid",
       "label": "Counsel CID",
-      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "prompt": "What is counsel's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
       "type": "string",
       "required": false,
       "filled_by": "applicant"

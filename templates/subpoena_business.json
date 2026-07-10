@@ -42,26 +42,30 @@
     {
       "key": "is_testimony",
       "label": "Testimony checkbox",
-      "prompt": "Does this subpoena command testimony? (bot writes \"X\" or leaves blank)",
+      "prompt": "Does this subpoena require the recipient to testify in person? (Yes/No)",
       "type": "choice",
       "options": [
-        "X",
-        " "
+        "Yes",
+        "No"
       ],
+      "value_map": { "Yes": "X", "No": " " },
       "required": true,
-      "filled_by": "applicant"
+      "filled_by": "applicant",
+      "note": "value_map translates the filer's Yes/No answer into the literal checkbox character ('X' or a blank space) placed in the document."
     },
     {
       "key": "is_documents",
       "label": "Production of Documents checkbox",
-      "prompt": "Does this subpoena command production of documents? (bot writes \"X\" or leaves blank)",
+      "prompt": "Does this subpoena require producing documents, ESI, or objects? (Yes/No)",
       "type": "choice",
       "options": [
-        "X",
-        " "
+        "Yes",
+        "No"
       ],
+      "value_map": { "Yes": "X", "No": " " },
       "required": true,
-      "filled_by": "applicant"
+      "filled_by": "applicant",
+      "note": "value_map translates the filer's Yes/No answer into the literal checkbox character ('X' or a blank space) placed in the document."
     },
     {
       "key": "documents_requested",
