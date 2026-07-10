@@ -39,9 +39,9 @@
       "filled_by": "auto"
     },
     {
-      "key": "owner_ssn",
-      "label": "SSN",
-      "prompt": "What is your SSN?",
+      "key": "owner_cid",
+      "label": "CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"

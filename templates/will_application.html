@@ -26,8 +26,8 @@
       <tr>
         <td class="label">Applicant Discordia:</td>
         <td><span class="field">{{discordia_email}}</span></td>
-        <td class="label">SSN:</td>
-        <td><span class="field">{{applicant_ssn}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{applicant_cid}}</span></td>
       </tr>
       <tr>
         <td class="label">Approving Justice:</td>
@@ -54,7 +54,7 @@
           <ul>
             <li>If married &mdash; spouse's name: <span class="field">{{spouse_name}}</span></li>
             <li>If NOT married &mdash; should I pass, I allow power of attorney to be provided to
-              <span class="field">{{fallback_poa_name}}</span> (SSN: <span class="field">{{fallback_poa_ssn}}</span>)
+              <span class="field">{{fallback_poa_name}}</span> (CID: <span class="field">{{fallback_poa_cid}}</span>)
               over all my estate.
             </li>
           </ul>
@@ -66,7 +66,7 @@
     <p class="doc-body">I hereby declare all assets and capital as listed, to be handed over to the respective individuals as stated per line.</p>
     <table class="form-grid">
       <tr>
-        <td class="section-label">Asset Name (incl. reference numbers) &amp; Recipient's Name/SSN</td>
+        <td class="section-label">Asset Name (incl. reference numbers) &amp; Recipient's Name/CID</td>
       </tr>
       <tr>
         <td class="wide-text"><span class="field block">{{asset_list}}</span></td>

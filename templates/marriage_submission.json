@@ -39,7 +39,6 @@
       "note": "Filled automatically at approval — not part of the intake handoff flow."
     }
   ],
-  "notes": "Source uses 'CID' rather than 'SSN' — kept as printed, but keyed as _ssn for consistency with other templates.",
   "fields": [
     {
       "key": "party_one_name",
@@ -50,9 +49,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "party_one_ssn",
+      "key": "party_one_cid",
       "label": "Party One CID",
-      "prompt": "What is Party One's CID?",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -66,9 +65,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "party_two_ssn",
+      "key": "party_two_cid",
       "label": "Party Two CID",
-      "prompt": "What is Party Two's CID?",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -82,9 +81,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "officiant_ssn",
+      "key": "officiant_cid",
       "label": "Officiant CID",
-      "prompt": "What is the officiant's CID?",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -98,9 +97,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "witness_ssn",
+      "key": "witness_cid",
       "label": "Witness CID",
-      "prompt": "What is the witness's CID?",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -166,7 +165,7 @@
       "note": "The reviewing/approving Judiciary of record — distinct from the Officiant. Filled in by the bot, never asked of the applicants."
     },
     {
-      "key": "approving_judge_ssn",
+      "key": "approving_judge_cid",
       "label": "Judiciary CID",
       "prompt": null,
       "type": "string",

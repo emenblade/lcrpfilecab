@@ -59,9 +59,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "applicant_ssn",
-      "label": "SSN",
-      "prompt": "What is your SSN?",
+      "key": "applicant_cid",
+      "label": "CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -75,9 +75,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "agent_ssn",
-      "label": "Agent SSN",
-      "prompt": "What is your agent's SSN?",
+      "key": "agent_cid",
+      "label": "Agent CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -91,9 +91,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "alternative_agent_ssn",
-      "label": "Alternative Agent SSN",
-      "prompt": "What is your alternative agent's SSN?",
+      "key": "alternative_agent_cid",
+      "label": "Alternative Agent CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": false,
       "filled_by": "applicant"
@@ -124,9 +124,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "witness_ssn",
-      "label": "Witness SSN",
-      "prompt": "What is the witness's SSN?",
+      "key": "witness_cid",
+      "label": "Witness CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"

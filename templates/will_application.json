@@ -47,9 +47,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "applicant_ssn",
-      "label": "SSN",
-      "prompt": "What is your SSN?",
+      "key": "applicant_cid",
+      "label": "CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -85,9 +85,9 @@
       "note": "Only relevant if is_married is \"Not Married\"."
     },
     {
-      "key": "fallback_poa_ssn",
-      "label": "Fallback POA SSN",
-      "prompt": "What is that person's SSN?",
+      "key": "fallback_poa_cid",
+      "label": "Fallback POA CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": false,
       "filled_by": "applicant"
@@ -95,7 +95,7 @@
     {
       "key": "asset_list",
       "label": "Asset List",
-      "prompt": "List your assets and who should receive each one, one per line (Asset — Recipient name and SSN).",
+      "prompt": "List your assets and who should receive each one, one per line (Asset — Recipient name and CID).",
       "type": "text",
       "required": true,
       "filled_by": "applicant"

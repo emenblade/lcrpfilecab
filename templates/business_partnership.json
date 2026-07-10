@@ -69,9 +69,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "partner1_ssn",
-      "label": "Partner 1 SSN",
-      "prompt": "What is Partner 1's SSN?",
+      "key": "partner1_cid",
+      "label": "Partner 1 CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -93,9 +93,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "partner2_ssn",
-      "label": "Partner 2 SSN",
-      "prompt": "What is Partner 2's SSN?",
+      "key": "partner2_cid",
+      "label": "Partner 2 CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"

@@ -51,9 +51,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "defendant_ssn",
-      "label": "Defendant SSN",
-      "prompt": "What is the defendant's SSN?",
+      "key": "defendant_cid",
+      "label": "Defendant CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"

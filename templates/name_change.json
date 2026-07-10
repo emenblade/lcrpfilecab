@@ -48,9 +48,9 @@
       "filled_by": "applicant"
     },
     {
-      "key": "ssn",
-      "label": "SSN",
-      "prompt": "What is your character's SSN?",
+      "key": "cid",
+      "label": "CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
