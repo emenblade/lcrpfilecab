@@ -28,5 +28,20 @@
       "request_type": "civil case information"
     },
     "search_text": "freedom of information request foia_request-2026-0001 emenblade civil case information keith jamieson"
+  },
+  {
+    "filing_id": "warrant_of_execution-2026-0001",
+    "template_id": "warrant_of_execution",
+    "title": "Warrant of Execution",
+    "category": "Warrants & Orders",
+    "url": "filings/warrant_of_execution/warrant_of_execution-2026-0001.html",
+    "filed_date": "2026-07-10",
+    "signed_date": "2026-07-10",
+    "signed_by": "Semen Blade",
+    "index_values": {
+      "defendant_name": "Alotta Fagina",
+      "case_number": "69"
+    },
+    "search_text": "warrant of execution warrant_of_execution-2026-0001 alotta fagina 69 semen blade"
   }
 ]
