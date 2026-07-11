@@ -62,6 +62,21 @@
     "search_text": "order of marriage dissolution divorce-2026-0001 emenblade gabe osu judge kj"
   },
   {
+    "filing_id": "foia_request-2026-0002",
+    "template_id": "foia_request",
+    "title": "Freedom of Information Request",
+    "category": "Court Filings & Petitions",
+    "url": "filings/foia_request/foia_request-2026-0002.html",
+    "filed_date": "2026-07-11",
+    "signed_date": "2026-07-11",
+    "signed_by": "Judge KJ",
+    "index_values": {
+      "applicant_name": "Jamie McKeith",
+      "request_type": "Back ground check"
+    },
+    "search_text": "freedom of information request foia_request-2026-0002 jamie mckeith back ground check judge kj"
+  },
+  {
     "filing_id": "bail_agreement-2026-0001",
     "template_id": "bail_agreement",
     "title": "Bail Agreement",
