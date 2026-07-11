@@ -13,5 +13,20 @@
       "case_number": "12345"
     },
     "search_text": "bail agreement bail_agreement-2026-0001 frank the flaming orb 12345 judge kj"
+  },
+  {
+    "filing_id": "foia_request-2026-0001",
+    "template_id": "foia_request",
+    "title": "Freedom of Information Request",
+    "category": "Court Filings & Petitions",
+    "url": "filings/foia_request/foia_request-2026-0001.html",
+    "filed_date": "2026-07-10",
+    "signed_date": "2026-07-10",
+    "signed_by": "Keith Jamieson",
+    "index_values": {
+      "applicant_name": "Emenblade",
+      "request_type": "civil case information"
+    },
+    "search_text": "freedom of information request foia_request-2026-0001 emenblade civil case information keith jamieson"
   }
 ]
