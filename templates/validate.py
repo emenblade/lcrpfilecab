@@ -40,6 +40,19 @@ for json_path in sorted(glob.glob("*.json")):
             if req_attr not in field:
                 errors.append(f"[{template_id}] field missing '{req_attr}': {field}")
 
+    # value_map: translates a human-friendly answer (e.g. "Yes") into the
+    # literal string placed in the document (e.g. "X"). Keys must exactly
+    # match the field's own options.
+    for field in manifest["fields"]:
+        value_map = field.get("value_map")
+        if value_map is None:
+            continue
+        if set(value_map.keys()) != set(field.get("options", [])):
+            errors.append(
+                f"[{template_id}] field '{field['key']}' value_map keys {sorted(value_map)} "
+                f"don't match its options {field.get('options')}"
+            )
+
     # judge fields should never be filled_by applicant, and vice versa is fine
     for field in manifest["fields"]:
         if field["key"].startswith("approving_judge") and field["filled_by"] not in ("judge",):

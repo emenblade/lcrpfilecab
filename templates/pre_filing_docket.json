@@ -1,0 +1,171 @@
+{
+  "template_id": "pre_filing_docket",
+  "title": "Criminal Pre-Filing Report",
+  "source_doc": null,
+  "html_file": "pre_filing_docket.html",
+  "category": "Criminal Filings",
+  "index_fields": [
+    "defendant_name",
+    "arrest_datetime"
+  ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filing Officer",
+      "requires_handoff": false
+    },
+    {
+      "role": "dao",
+      "label": "District Attorney's Office",
+      "requires_handoff": false,
+      "note": "Reviews the pre-filing and decides whether it proceeds to a Court Docket or is dismissed with prejudice -- filled by the DAO when they process it, not part of intake."
+    }
+  ],
+  "notes": "No source Google Doc -- built directly from Bar Procedures Section 4B (Pre-Filings) and Appendix E (Timescales). This is the document that starts a criminal case: it must reach the DAO within 72 hours of arrest or the case is dismissed with prejudice, and the DAO then has 7 days to decide. Keeping intake short on purpose so an officer can file this in the field right after an arrest.",
+  "fields": [
+    {
+      "key": "arresting_officer_name",
+      "label": "Filing Officer",
+      "prompt": "What is your name? You're the arresting officer (or designated LEO) filing this report.",
+      "type": "signature",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "arresting_officer_rank_department",
+      "label": "Rank & Department",
+      "prompt": "What is your rank and department?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "defendant_name",
+      "label": "Defendant",
+      "prompt": "What is the defendant's full name?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "defendant_cid",
+      "label": "Defendant CID",
+      "prompt": "What is the defendant's CID? Ask them to run /cid in city and share it with you, or answer \"Unknown\" if you don't have it.",
+      "type": "string",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "arrest_datetime",
+      "label": "Date/Time of Arrest",
+      "prompt": "What date and time was the defendant arrested? This is important -- it starts the 72-hour clock for getting this pre-filing to the DAO, so please double check it.",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date/Time Filed",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto",
+      "note": "Auto-filled at submission. Compared against arrest_datetime to flag pre-filings approaching or past the 72-hour deadline."
+    },
+    {
+      "key": "custody_status",
+      "label": "Custody Status",
+      "prompt": "Is the defendant currently being held in custody, or have they been released pending a court date?",
+      "type": "choice",
+      "options": [
+        "In Custody - Awaiting Docket",
+        "Released Pending Court Date"
+      ],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "bail_requested",
+      "label": "Bail Hearing Requested",
+      "prompt": "Are you requesting a bail hearing for the defendant?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "charges_sought",
+      "label": "Charges Sought",
+      "prompt": "What charges are you seeking against the defendant?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "probable_cause_summary",
+      "label": "Probable Cause / Evidence Summary",
+      "prompt": "Summarize the evidence and probable cause supporting these charges.",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "witnesses",
+      "label": "Witnesses",
+      "prompt": "List any witnesses to the incident (or answer \"None\").",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "supporting_evidence",
+      "label": "Supporting Evidence",
+      "prompt": "List any supporting evidence attached -- body cam, reports, photos, etc. (or answer \"None\").",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "dao_reviewer_name",
+      "label": "DAO Reviewer",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "dao",
+      "note": "The DAO official who reviewed this pre-filing. Filled in by the bot when the DAO processes it -- never asked of the filing officer."
+    },
+    {
+      "key": "dao_decision",
+      "label": "DAO Decision",
+      "prompt": null,
+      "type": "choice",
+      "options": [
+        "Filed as Court Docket",
+        "Dismissed with Prejudice"
+      ],
+      "required": true,
+      "filled_by": "dao",
+      "note": "Selected by the DAO. Per Bar Procedures, if this isn't decided within 7 days of filing, the case is automatically dismissed with prejudice."
+    },
+    {
+      "key": "docket_number",
+      "label": "Docket Number",
+      "prompt": null,
+      "type": "string",
+      "required": false,
+      "filled_by": "dao",
+      "note": "Assigned by the DAO only if dao_decision is 'Filed as Court Docket'."
+    },
+    {
+      "key": "dao_decision_date",
+      "label": "Date of DAO Decision",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    }
+  ]
+}

@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>[LCRP] Divorce</title>
+<title>[LCRP] Annulment</title>
 <link rel="stylesheet" href="/assets/template-base.css">
 </head>
 <body>
   <div class="sheet">
     <img class="letterhead" src="/assets/letterhead.png" alt="The San Andreas Supreme Court">
-    <h1>Order of Marriage Dissolution</h1>
+    <h1>Petition for Annulment</h1>
 
-    <p class="notice" style="text-align:center">This document is considered a NO-FAULT DIVORCE CERTIFICATION.</p>
-    <p class="warning">This is NOT valid until signed by a judge or other official so ordered to dispense this duty. Upon full signature, the relevant marriage is legally ended.</p>
+    <p class="notice" style="text-align:center">This document, once granted, VOIDS the marriage as if it never took place.</p>
+    <p class="warning">This is NOT valid until signed by a judge or other official so ordered to dispense this duty. There is no division of assets under an annulment, regardless of any pre-nuptial agreement.</p>
 
     <table class="form-grid">
       <tr>
@@ -21,16 +21,18 @@
         <td><span class="field">{{party_one_cid}}</span></td>
       </tr>
       <tr>
+        <td class="label">Party One's Prior Name:</td>
+        <td colspan="3"><span class="field">{{party_one_prior_name}}</span></td>
+      </tr>
+      <tr>
         <td class="label">Party Two:</td>
         <td><span class="field">{{party_two_name}}</span></td>
         <td class="label">CID:</td>
         <td><span class="field">{{party_two_cid}}</span></td>
       </tr>
       <tr>
-        <td class="label">Counsel:</td>
-        <td><span class="field">{{counsel_name}}</span></td>
-        <td class="label">CID:</td>
-        <td><span class="field">{{counsel_cid}}</span></td>
+        <td class="label">Party Two's Prior Name:</td>
+        <td colspan="3"><span class="field">{{party_two_prior_name}}</span></td>
       </tr>
       <tr>
         <td class="label">Court Authority:</td>
@@ -40,16 +42,11 @@
       </tr>
     </table>
 
-    <h2 class="section">Reason for Dissolution</h2>
-    <p class="doc-body"><span class="field block">{{reason_for_dissolution}}</span></p>
-
-    <table class="form-grid">
-      <tr><td class="label">Pre-Nuptial Agreement:</td><td><span class="field">{{prenup_status}}</span></td></tr>
-      <tr><td class="label">Specific Requests (Asset Allocation):</td><td><span class="field">{{specific_requests}}</span></td></tr>
-    </table>
+    <h2 class="section">Grounds for Annulment (Fraud)</h2>
+    <p class="doc-body"><span class="field block">{{fraud_grounds}}</span></p>
 
     <h2 class="section">Signing</h2>
-    <p class="notice">MAY IT BE ENACTED:</p>
+    <p class="notice">MAY IT BE ENACTED: upon signature, both parties revert to the names and status held prior to this marriage.</p>
 
     <table class="form-grid">
       <tr>
@@ -64,15 +61,9 @@
         <td class="label">Date:</td>
         <td><span class="field">{{approval_date}}</span></td>
       </tr>
-      <tr>
-        <td class="label">Counsel:</td>
-        <td><span class="field signature">{{counsel_signature}}</span></td>
-        <td class="label">Date:</td>
-        <td><span class="field">{{counsel_signed_date}}</span></td>
-      </tr>
     </table>
 
-    <p class="meta">LCRP-DoJ &bull; Order of Marriage Dissolution</p>
+    <p class="meta">LCRP-DoJ &bull; Petition for Annulment</p>
   </div>
 </body>
 </html>

@@ -89,6 +89,14 @@
       "filled_by": "applicant"
     },
     {
+      "key": "name_change_request",
+      "label": "Name Change on Marriage",
+      "prompt": "Would either party like to change their name as part of this marriage? If so, say who and what name they're taking (or answer \"None\") — this can be bundled into the marriage filing instead of a separate name change request.",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
       "key": "witness_name",
       "label": "Witness",
       "prompt": "Who is witnessing this marriage?",

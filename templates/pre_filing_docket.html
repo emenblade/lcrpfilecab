@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Criminal Pre-Filing Report</title>
+<link rel="stylesheet" href="/assets/template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="/assets/letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Criminal Pre-Filing Report</h1>
+
+    <p class="warning">This report must reach the District Attorney's Office within 72 HOURS of the defendant's arrest. If it does not, the case will be dismissed with prejudice. The DAO then has 7 days to complete its assessment before the same applies.</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Filing Officer:</td>
+        <td><span class="field signature">{{arresting_officer_name}}</span></td>
+        <td class="label">Rank &amp; Dept:</td>
+        <td><span class="field">{{arresting_officer_rank_department}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Defendant:</td>
+        <td><span class="field">{{defendant_name}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{defendant_cid}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Date/Time of Arrest:</td>
+        <td><span class="field">{{arrest_datetime}}</span></td>
+        <td class="label">Date/Time Filed:</td>
+        <td><span class="field">{{date_filed}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Custody Status:</td>
+        <td><span class="field">{{custody_status}}</span></td>
+        <td class="label">Bail Hearing Requested:</td>
+        <td><span class="field">{{bail_requested}}</span></td>
+      </tr>
+    </table>
+
+    <h2 class="section">Charges Sought</h2>
+    <p class="doc-body"><span class="field block">{{charges_sought}}</span></p>
+
+    <h2 class="section">Probable Cause / Evidence Summary</h2>
+    <p class="doc-body"><span class="field block">{{probable_cause_summary}}</span></p>
+
+    <h2 class="section">Witnesses</h2>
+    <p class="doc-body"><span class="field block">{{witnesses}}</span></p>
+
+    <h2 class="section">Supporting Evidence</h2>
+    <p class="doc-body"><span class="field block">{{supporting_evidence}}</span></p>
+
+    <p class="warning">I DECLARE UNDER PENALTY OF PERJURY UNDER THE LAWS OF THE STATE OF SAN ANDREAS THAT THE FOREGOING IS TRUE AND CORRECT: Yes</p>
+
+    <h2 class="section">District Attorney's Office Review</h2>
+    <table class="form-grid">
+      <tr>
+        <td class="label">DAO Reviewer:</td>
+        <td><span class="field signature">{{dao_reviewer_name}}</span></td>
+        <td class="label">Date of Decision:</td>
+        <td><span class="field">{{dao_decision_date}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Decision:</td>
+        <td><span class="field">{{dao_decision}}</span></td>
+        <td class="label">Docket Number:</td>
+        <td><span class="field">{{docket_number}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">LCRP-DoJ &bull; Criminal Pre-Filing Report</p>
+  </div>
+</body>
+</html>

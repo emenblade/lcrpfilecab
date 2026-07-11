@@ -1,0 +1,150 @@
+{
+  "template_id": "expungement",
+  "title": "Request for Expungement",
+  "source_doc": null,
+  "html_file": "expungement.html",
+  "category": "Criminal Filings",
+  "index_fields": [
+    "applicant_name",
+    "charges_to_expunge"
+  ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Filer",
+      "requires_handoff": false
+    },
+    {
+      "role": "judge",
+      "label": "Approving Judge",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval -- not part of the intake handoff flow."
+    }
+  ],
+  "notes": "No source Google Doc -- built directly from Bar Procedures Section 2G. Capital crimes cannot be expunged (that requires a Pardon instead) -- worth a reminder in the bot's intake flow, though it isn't a field on the document itself. Waiting periods (14 days for misdemeanors/non-violent felonies, 30 days for violent felonies since the last conviction) are checked against conviction_date and date_filed.",
+  "fields": [
+    {
+      "key": "applicant_name",
+      "label": "Applicant",
+      "prompt": "What is your full name?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "discordia_email",
+      "label": "Applicant Discordia",
+      "prompt": "What Discord email/account do you have on file?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "applicant_cid",
+      "label": "CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "lawyer_name",
+      "label": "Lawyer",
+      "prompt": "Are you represented by a lawyer for this request? If so, name them (or answer \"None\").",
+      "type": "string",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "charges_to_expunge",
+      "label": "Charge(s) to Expunge",
+      "prompt": "Which specific charge(s)/conviction(s) are you requesting be expunged? (Note: capital crimes can't be expunged -- that requires a Pardon instead.)",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "conviction_date",
+      "label": "Date of Conviction",
+      "prompt": "What date were you convicted of the charge(s) you're requesting to expunge?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "personal_statement",
+      "label": "Personal Statement",
+      "prompt": "Write a personal statement: why do you want this expunged, and what have you done to demonstrate a change in behavior since?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "supporting_references",
+      "label": "Supporting References / Evidence of Reform",
+      "prompt": "List any references supporting your request (e.g. Police Officers, Doctors, Government Officials, Business Owners) or evidence of community service. (Answer \"None\" if you don't have any yet.)",
+      "type": "text",
+      "required": false,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "reinstate_weapons_license",
+      "label": "Weapons License Reinstatement Requested",
+      "prompt": "If this is approved, are you requesting your weapons license be reinstated? (You'll still need to see a Law Enforcement Officer in person to actually get it back.)",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "hearing_status",
+      "label": "Hearing Status",
+      "prompt": null,
+      "type": "choice",
+      "options": [
+        "Hearing Held",
+        "Processed Offline"
+      ],
+      "required": true,
+      "filled_by": "judge",
+      "note": "The assigned judge decides whether a hearing is needed or the request can be processed offline -- not something the applicant chooses."
+    },
+    {
+      "key": "expungement_fee",
+      "label": "Fee Assessed",
+      "prompt": null,
+      "type": "string",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Set by the judge on approval -- ranges from $0 to $250,000 depending on the number and severity of charges expunged."
+    },
+    {
+      "key": "approving_judge_name",
+      "label": "Approving Judge",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a judge approves the expungement -- never asked of the applicant."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date (Judge)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    }
+  ]
+}

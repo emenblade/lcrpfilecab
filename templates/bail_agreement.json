@@ -63,8 +63,24 @@
     {
       "key": "bail_amount",
       "label": "Amount of Bail",
-      "prompt": "What is the bail amount?",
+      "prompt": "What is the bail amount? (Minimum $100,000, no maximum -- it should be significant enough to discourage breaking the agreement.)",
       "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "bail_duration",
+      "label": "Duration of Bail",
+      "prompt": "How long is this bail granted for?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "bail_conditions",
+      "label": "Bail Conditions",
+      "prompt": "Are there any conditions attached to this release beyond the standard terms — e.g. restricted areas, no contact with specific people, ankle monitor? List them, or answer \"Standard terms only\".",
+      "type": "text",
       "required": true,
       "filled_by": "applicant"
     },

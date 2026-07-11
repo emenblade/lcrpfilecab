@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>[LCRP] Expungement</title>
+<link rel="stylesheet" href="/assets/template-base.css">
+</head>
+<body>
+  <div class="sheet">
+    <img class="letterhead" src="/assets/letterhead.png" alt="The San Andreas Supreme Court">
+    <h1>Request for Expungement</h1>
+
+    <p class="notice" style="text-align:center">Sealing of one or more crimes from an individual's criminal record.</p>
+    <p class="warning">Capital crimes cannot be expunged. This is NOT valid until signed by a judge.</p>
+
+    <table class="form-grid">
+      <tr>
+        <td class="label">Applicant:</td>
+        <td><span class="field">{{applicant_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{date_filed}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Discordia:</td>
+        <td><span class="field">{{discordia_email}}</span></td>
+        <td class="label">CID:</td>
+        <td><span class="field">{{applicant_cid}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Lawyer:</td>
+        <td colspan="3"><span class="field">{{lawyer_name}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Date of Conviction:</td>
+        <td colspan="3"><span class="field">{{conviction_date}}</span></td>
+      </tr>
+    </table>
+
+    <h2 class="section">Charge(s) to Expunge</h2>
+    <p class="doc-body"><span class="field block">{{charges_to_expunge}}</span></p>
+
+    <h2 class="section">Personal Statement</h2>
+    <p class="doc-body"><span class="field block">{{personal_statement}}</span></p>
+
+    <h2 class="section">Supporting References / Evidence of Reform</h2>
+    <p class="doc-body"><span class="field block">{{supporting_references}}</span></p>
+
+    <table class="form-grid">
+      <tr><td class="label">Weapons License Reinstatement Requested:</td><td><span class="field">{{reinstate_weapons_license}}</span></td></tr>
+    </table>
+
+    <p class="warning">I DECLARE UNDER PENALTY OF PERJURY UNDER THE LAWS OF THE STATE OF SAN ANDREAS THAT THE FOREGOING IS TRUE AND CORRECT: Yes</p>
+
+    <h2 class="section">Court Determination</h2>
+    <table class="form-grid">
+      <tr>
+        <td class="label">Hearing Status:</td>
+        <td><span class="field">{{hearing_status}}</span></td>
+        <td class="label">Fee Assessed:</td>
+        <td><span class="field">{{expungement_fee}}</span></td>
+      </tr>
+      <tr>
+        <td class="label">Approving Judge:</td>
+        <td><span class="field signature">{{approving_judge_name}}</span></td>
+        <td class="label">Date:</td>
+        <td><span class="field">{{approval_date}}</span></td>
+      </tr>
+    </table>
+
+    <p class="meta">LCRP-DoJ &bull; Request for Expungement</p>
+  </div>
+</body>
+</html>

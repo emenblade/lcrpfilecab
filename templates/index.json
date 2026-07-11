@@ -35,6 +35,13 @@
     "json_file": "divorce.json"
   },
   {
+    "template_id": "annulment",
+    "title": "Petition for Annulment",
+    "category": "Civil & Family",
+    "html_file": "annulment.html",
+    "json_file": "annulment.json"
+  },
+  {
     "template_id": "medical_power_of_attorney",
     "title": "Power of Attorney for Health Care",
     "category": "Civil & Family",
@@ -61,6 +68,20 @@
     "category": "Court Filings & Petitions",
     "html_file": "witness_affidavit.html",
     "json_file": "witness_affidavit.json"
+  },
+  {
+    "template_id": "pre_filing_docket",
+    "title": "Criminal Pre-Filing Report",
+    "category": "Criminal Filings",
+    "html_file": "pre_filing_docket.html",
+    "json_file": "pre_filing_docket.json"
+  },
+  {
+    "template_id": "expungement",
+    "title": "Request for Expungement",
+    "category": "Criminal Filings",
+    "html_file": "expungement.html",
+    "json_file": "expungement.json"
   },
   {
     "template_id": "bail_agreement",
