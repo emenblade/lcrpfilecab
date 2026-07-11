@@ -47,6 +47,21 @@
     "search_text": "dissolution of business partnership agreement dissolution_of_partnership-2026-0001 chair sitters anon emen blade gabe osu judge jamieson"
   },
   {
+    "filing_id": "divorce-2026-0001",
+    "template_id": "divorce",
+    "title": "Order of Marriage Dissolution",
+    "category": "Civil & Family",
+    "url": "filings/divorce/divorce-2026-0001.html",
+    "filed_date": "2026-07-11",
+    "signed_date": "2026-07-11",
+    "signed_by": "Judge KJ",
+    "index_values": {
+      "party_one_name": "Emenblade",
+      "party_two_name": "Gabe OSU"
+    },
+    "search_text": "order of marriage dissolution divorce-2026-0001 emenblade gabe osu judge kj"
+  },
+  {
     "filing_id": "bail_agreement-2026-0001",
     "template_id": "bail_agreement",
     "title": "Bail Agreement",
