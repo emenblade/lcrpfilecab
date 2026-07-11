@@ -31,6 +31,22 @@
     "search_text": "business partnership agreement business_partnership-2026-0001 chair sitters anon emen blade gabu osu judge kj"
   },
   {
+    "filing_id": "dissolution_of_partnership-2026-0001",
+    "template_id": "dissolution_of_partnership",
+    "title": "Dissolution of Business Partnership Agreement",
+    "category": "Business Filings",
+    "url": "filings/dissolution_of_partnership/dissolution_of_partnership-2026-0001.html",
+    "filed_date": "2026-07-11",
+    "signed_date": "2026-07-11",
+    "signed_by": "Judge Jamieson",
+    "index_values": {
+      "business_name": "Chair sitters ANON",
+      "partner1_name": "Emen Blade",
+      "partner2_name": "Gabe OSU"
+    },
+    "search_text": "dissolution of business partnership agreement dissolution_of_partnership-2026-0001 chair sitters anon emen blade gabe osu judge jamieson"
+  },
+  {
     "filing_id": "bail_agreement-2026-0001",
     "template_id": "bail_agreement",
     "title": "Bail Agreement",
