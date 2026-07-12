@@ -1,5 +1,20 @@
 [
   {
+    "filing_id": "bail_agreement-2026-0002",
+    "template_id": "bail_agreement",
+    "title": "Bail Agreement",
+    "category": "Warrants & Orders",
+    "url": "filings/bail_agreement/bail_agreement-2026-0002.html",
+    "filed_date": "2026-07-11",
+    "signed_date": "2026-07-12",
+    "signed_by": "Judge Jamieson",
+    "index_values": {
+      "defendant_name": "Fungus",
+      "case_number": "69420"
+    },
+    "search_text": "bail agreement bail_agreement-2026-0002 fungus 69420 judge jamieson"
+  },
+  {
     "filing_id": "arrest_warrant-2026-0001",
     "template_id": "arrest_warrant",
     "title": "Warrant of Arrest",
