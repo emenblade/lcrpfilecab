@@ -80,6 +80,25 @@
       "filled_by": "applicant"
     },
     {
+      "key": "is_joining_family",
+      "label": "Joining a Family",
+      "prompt": "Is this name change to join a family (e.g. taking a family surname)?",
+      "type": "choice",
+      "options": ["Yes", "No"],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "family_permission",
+      "label": "Family Permission",
+      "prompt": "Do you have permission from the family to join them under this name? Briefly confirm who granted it.",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant",
+      "depends_on": { "field": "is_joining_family", "equals": "Yes" },
+      "skip_value": "N/A"
+    },
+    {
       "key": "approving_judge_name",
       "label": "Approving Judiciary",
       "prompt": null,

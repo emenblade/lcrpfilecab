@@ -99,7 +99,7 @@
     {
       "key": "asset_list",
       "label": "Asset List",
-      "prompt": "List your assets and who should receive each one, one per line (Asset — Recipient name and CID).",
+      "prompt": "List your assets and who should receive each one, one per line (Asset — Recipient name and CID). Note: everything you bequeath must be within the city limits, and you can't will something to another character on your own account.",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
