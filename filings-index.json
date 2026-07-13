@@ -15,6 +15,21 @@
     "search_text": "bail agreement bail_agreement-2026-0002 fungus 69420 judge jamieson"
   },
   {
+    "filing_id": "witness_affidavit-2026-0001",
+    "template_id": "witness_affidavit",
+    "title": "Sworn Affidavit (Form AF-1)",
+    "category": "Court Filings & Petitions",
+    "url": "filings/witness_affidavit/witness_affidavit-2026-0001.html",
+    "filed_date": "2026-07-12",
+    "signed_date": "2026-07-12",
+    "signed_by": "Semen Blade",
+    "index_values": {
+      "affiant_name": "Jamie McKeith",
+      "counsel_name": "Keith Jamieson"
+    },
+    "search_text": "sworn affidavit (form af-1) witness_affidavit-2026-0001 jamie mckeith keith jamieson semen blade"
+  },
+  {
     "filing_id": "arrest_warrant-2026-0001",
     "template_id": "arrest_warrant",
     "title": "Warrant of Arrest",
