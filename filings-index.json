@@ -15,6 +15,21 @@
     "search_text": "bail agreement bail_agreement-2026-0002 fungus 69420 judge jamieson"
   },
   {
+    "filing_id": "vehicle_return-2026-0001",
+    "template_id": "vehicle_return",
+    "title": "Vehicle Return",
+    "category": "Warrants & Orders",
+    "url": "filings/vehicle_return/vehicle_return-2026-0001.html",
+    "filed_date": "2026-07-12",
+    "signed_date": "2026-07-12",
+    "signed_by": "Judge Keith Jamieson",
+    "index_values": {
+      "owner_name": "Jamie McKeith",
+      "vehicle_vin_location": "0092200-3"
+    },
+    "search_text": "vehicle return vehicle_return-2026-0001 jamie mckeith 0092200-3 judge keith jamieson"
+  },
+  {
     "filing_id": "witness_affidavit-2026-0001",
     "template_id": "witness_affidavit",
     "title": "Sworn Affidavit (Form AF-1)",
