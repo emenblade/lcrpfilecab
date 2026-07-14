@@ -15,8 +15,8 @@
       "requires_handoff": false
     },
     {
-      "role": "justice",
-      "label": "Approving Justice",
+      "role": "judge",
+      "label": "Approving Judge/Justice",
       "requires_handoff": false,
       "note": "Filled automatically at approval -- not part of the intake handoff flow."
     }
@@ -133,7 +133,7 @@
         "No"
       ],
       "required": true,
-      "filled_by": "justice",
+      "filled_by": "judge",
       "note": "Pardons always require a hearing, but this field records whether the hearing took place as scheduled."
     },
     {
@@ -142,21 +142,21 @@
       "prompt": null,
       "type": "string",
       "required": true,
-      "filled_by": "justice",
-      "note": "Set by the Justice on approval -- ranges from $100,000 to $500,000 depending on the number and severity of charges."
+      "filled_by": "judge",
+      "note": "Set by the Judge/Justice on approval -- ranges from $100,000 to $500,000 depending on the number and severity of charges."
     },
     {
-      "key": "approving_justice_name",
-      "label": "Approving Justice",
+      "key": "approving_judge_name",
+      "label": "Approving Judge/Justice",
       "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "justice",
-      "note": "Rendered in cursive. Filled in by the bot when a Justice approves the pardon -- never asked of the applicant."
+      "filled_by": "judge",
+      "note": "Rendered in cursive. Filled in by the bot when a Judge/Justice approves the pardon -- never asked of the applicant."
     },
     {
       "key": "approval_date",
-      "label": "Date (Justice)",
+      "label": "Date (Judge/Justice)",
       "prompt": null,
       "type": "date",
       "required": true,

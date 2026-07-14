@@ -15,13 +15,13 @@
       "requires_handoff": false
     },
     {
-      "role": "authority",
-      "label": "Approving Authority (LEO or Judge)",
+      "role": "judge",
+      "label": "Approving Judge",
       "requires_handoff": false,
-      "note": "A Law Enforcement Officer may grant a TRO; a Judge or Justice grants a Full Restraining Order."
+      "note": "Filled automatically at approval -- not part of the intake handoff flow."
     }
   ],
-  "notes": "Built from Bar Procedures Section 7C. A TRO is filed with a Law Enforcement Officer and valid for 7 days. A Full Restraining Order requires a court petition and runs from 7 days up to 6 months. This form covers both scenarios -- the 'order_type' field determines which. The approving authority should be an LEO for TROs and a Judge/Justice for Full Orders.",
+  "notes": "Built from Bar Procedures Section 7C. A TRO is filed with a Law Enforcement Officer and valid for 7 days. A Full Restraining Order requires a court petition and runs from 7 days up to 6 months. This form covers both scenarios -- the 'order_type' field determines which. The approving judge field is filled by whichever authority (LEO for TRO, Judge/Justice for Full Order) approves the request.",
   "fields": [
     {
       "key": "order_type",
@@ -132,12 +132,12 @@
       "filled_by": "applicant"
     },
     {
-      "key": "approving_authority_name",
+      "key": "approving_judge_name",
       "label": "Approving Authority",
       "prompt": null,
       "type": "signature",
       "required": true,
-      "filled_by": "authority",
+      "filled_by": "judge",
       "note": "Rendered in cursive. For a TRO this is the LEO's name; for a Full Order this is the Judge/Justice's name."
     },
     {
@@ -149,12 +149,12 @@
       "filled_by": "auto"
     },
     {
-      "key": "approving_authority_title",
+      "key": "approving_judge_title",
       "label": "Title / Badge",
       "prompt": null,
       "type": "string",
       "required": true,
-      "filled_by": "authority",
+      "filled_by": "judge",
       "note": "e.g. 'Police Officer, Badge #1234' for a TRO, or 'Justice of the Supreme Court' for a Full Order."
     }
   ]
