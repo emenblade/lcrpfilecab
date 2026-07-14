@@ -26,7 +26,7 @@
     {
       "key": "order_type",
       "label": "Type of Order",
-      "prompt": "What type of restraining order are you filing for?",
+      "prompt": "What kind of order do you need? Pick one:\n- Temporary Restraining Order (TRO) — for immediate, short-term protection. Granted by a police officer, lasts up to 7 days.\n- Full Restraining Order — for longer-term protection. Goes through a judge, can last up to 6 months.",
       "type": "choice",
       "options": [
         "Temporary Restraining Order (TRO)",
@@ -46,7 +46,7 @@
     {
       "key": "order_duration",
       "label": "Order Duration",
-      "prompt": "How long should this order be in effect? (TROs: max 7 days. Full Orders: 7 days to 6 months.)",
+      "prompt": "How long do you need this order to last?\n- TROs: maximum 7 days\n- Full orders: anywhere from 7 days up to 6 months\nJust write the number of days (e.g. \"7 days\" or \"3 months\").",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -54,7 +54,7 @@
     {
       "key": "petitioner_name",
       "label": "Petitioner",
-      "prompt": "What is your full legal name (the person requesting protection)?",
+      "prompt": "What is your full name? (The person who needs protection.)",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -70,7 +70,7 @@
     {
       "key": "petitioner_discordia",
       "label": "Petitioner Discordia",
-      "prompt": "What Discord email/account do you have on file?",
+      "prompt": "What is your Discordia email?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -78,7 +78,7 @@
     {
       "key": "respondent_name",
       "label": "Respondent Name",
-      "prompt": "What is the full name of the person you are seeking the restraining order against?",
+      "prompt": "What is the full name of the person you need protection from?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -86,7 +86,7 @@
     {
       "key": "respondent_cid",
       "label": "Respondent CID",
-      "prompt": "What is the CID of the person you are seeking the restraining order against? (Enter \"Unknown\" if you do not have it.)",
+      "prompt": "What is their CID? If you don't have it, type \"Unknown\".",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -94,7 +94,7 @@
     {
       "key": "respondent_aliases",
       "label": "Known Aliases",
-      "prompt": "Does the respondent have any known aliases or alternative names? (Answer \"None\" if not applicable.)",
+      "prompt": "Do they go by any other names? If not, just type \"None\".",
       "type": "string",
       "required": false,
       "filled_by": "applicant"
@@ -102,7 +102,7 @@
     {
       "key": "protected_locations",
       "label": "Protected Locations",
-      "prompt": "List the locations the respondent should be barred from approaching (e.g. your home, workplace, specific addresses). Provide as much detail as possible.",
+      "prompt": "What places should they NOT be allowed near? (e.g. your home, your workplace, a friend's house — include addresses if you have them.)",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -110,7 +110,7 @@
     {
       "key": "grounds_for_order",
       "label": "Grounds for Order",
-      "prompt": "Describe the specific incidents of harassment, abuse, threats, or violence that justify this restraining order. Include dates and any evidence or reports if available.",
+      "prompt": "Tell us what happened. Describe the specific incidents of harassment, threats, or violence that made you file for this order. Include dates if you remember them.",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -118,7 +118,7 @@
     {
       "key": "terms_and_conditions",
       "label": "Terms & Conditions",
-      "prompt": "What specific restrictions should the order place on the respondent? (e.g. no contact, no approach within X feet, no attending specified locations.)",
+      "prompt": "What should this order actually say they can't do? Examples:\n- No contacting you by any means\n- Stay at least X feet away from you\n- Don't come near your home or work\nIf you're not sure, type \"Standard no-contact order\" and the judge will set the terms.",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -126,7 +126,7 @@
     {
       "key": "issuing_leo_badge",
       "label": "LEO Badge (if TRO)",
-      "prompt": "If this is a TRO: what is the badge number of the Law Enforcement Officer who reviewed and granted this temporary order? If this is a Full Order, answer \"N/A\".",
+      "prompt": "If a police officer already gave you a temporary order: what's their badge number?\nIf you're going straight for a Full Order with a judge, type \"N/A\".",
       "type": "string",
       "required": false,
       "filled_by": "applicant"

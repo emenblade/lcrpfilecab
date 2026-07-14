@@ -26,7 +26,7 @@
     {
       "key": "petitioner_name",
       "label": "Petitioner",
-      "prompt": "What is your full legal name?",
+      "prompt": "What is your full name?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -42,7 +42,7 @@
     {
       "key": "discordia_email",
       "label": "Discordia Email",
-      "prompt": "What Discord email/account do you have on file?",
+      "prompt": "What is your Discordia email?",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -58,7 +58,7 @@
     {
       "key": "lawyer_name",
       "label": "Lawyer",
-      "prompt": "A lawyer is required for a pardon petition. Who is representing you? Provide their full name and bar number if known.",
+      "prompt": "You need a lawyer for this. Who is representing you? Type their full name.",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -66,7 +66,7 @@
     {
       "key": "arrest_date",
       "label": "Date of Arrest",
-      "prompt": "What date were you arrested for the capital charge(s)? (At least 6 months must have passed since this date.)",
+      "prompt": "What date were you arrested? Important: at least 6 months must have passed since this date.",
       "type": "date",
       "required": true,
       "filled_by": "applicant"
@@ -74,7 +74,7 @@
     {
       "key": "conviction_date",
       "label": "Date of Conviction",
-      "prompt": "What date were you convicted of the capital charge(s)?",
+      "prompt": "What date were you found guilty of the charge(s)?",
       "type": "date",
       "required": true,
       "filled_by": "applicant"
@@ -82,7 +82,7 @@
     {
       "key": "convicting_authority",
       "label": "Convicted By",
-      "prompt": "Which court or authority convicted you of these charges? (e.g. San Andreas District Court, Supreme Court)",
+      "prompt": "Which court convicted you? (e.g. San Andreas District Court, Supreme Court — if you're not sure, type \"District Court\".)",
       "type": "string",
       "required": true,
       "filled_by": "applicant"
@@ -90,7 +90,7 @@
     {
       "key": "charges_to_pardon",
       "label": "Charge(s) Subject to Pardon",
-      "prompt": "List the specific capital charge(s) you are seeking a pardon for.",
+      "prompt": "Which specific charge(s) are you asking to be pardoned for? These should be capital crimes (the most serious kind). List them clearly.",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -98,7 +98,7 @@
     {
       "key": "personal_statement",
       "label": "Personal Statement",
-      "prompt": "Write a personal statement explaining why you believe you deserve a pardon. Include what you have done since your conviction to reform and rehabilitate.",
+      "prompt": "Tell us why you deserve a pardon. What have you done since your conviction to turn things around? This is your chance to explain — be honest.",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -106,7 +106,7 @@
     {
       "key": "evidence_of_reform",
       "label": "Character Witnesses & Evidence of Reform",
-      "prompt": "List your character witnesses and any evidence of reform. A pardon requires character witnesses and employee references. Provide names, roles, and what they can attest to.",
+      "prompt": "List people who can vouch for you (character witnesses) and any evidence that shows you've changed. Examples:\n- A business owner who employs you\n- A doctor or government official who knows you\n- Community service you've done\nInclude their names and what they can confirm about you.",
       "type": "text",
       "required": true,
       "filled_by": "applicant"
@@ -114,7 +114,7 @@
     {
       "key": "reinstate_weapons_license",
       "label": "Weapons License Reinstatement Requested",
-      "prompt": "If your pardon is approved, are you requesting your weapons license be reinstated? (You will still need to see a Law Enforcement Officer in person to receive the physical license.)",
+      "prompt": "If your pardon is approved, do you want your weapons license back? (You'll still need to visit a police officer in person to pick it up.)",
       "type": "choice",
       "options": [
         "Yes",
