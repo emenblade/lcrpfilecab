@@ -77,18 +77,18 @@
     "json_file": "pre_filing_docket.json"
   },
   {
-    "template_id": "expungement",
-    "title": "Request for Expungement",
-    "category": "Criminal Filings",
-    "html_file": "expungement.html",
-    "json_file": "expungement.json"
-  },
-  {
     "template_id": "pardon",
     "title": "Petition for Pardon",
     "category": "Criminal Filings",
     "html_file": "pardon.html",
     "json_file": "pardon.json"
+  },
+  {
+    "template_id": "expungement",
+    "title": "Request for Expungement",
+    "category": "Criminal Filings",
+    "html_file": "expungement.html",
+    "json_file": "expungement.json"
   },
   {
     "template_id": "bail_agreement",
@@ -119,6 +119,13 @@
     "json_file": "subpoena.json"
   },
   {
+    "template_id": "restraining_order",
+    "title": "Restraining Order",
+    "category": "Warrants & Orders",
+    "html_file": "restraining_order.html",
+    "json_file": "restraining_order.json"
+  },
+  {
     "template_id": "subpoena_business",
     "title": "Subpoena Duces Tecum",
     "category": "Warrants & Orders",
@@ -145,12 +152,5 @@
     "category": "Warrants & Orders",
     "html_file": "warrant_of_execution.html",
     "json_file": "warrant_of_execution.json"
-  },
-  {
-    "template_id": "restraining_order",
-    "title": "Restraining Order",
-    "category": "Warrants & Orders",
-    "html_file": "restraining_order.html",
-    "json_file": "restraining_order.json"
   }
 ]
