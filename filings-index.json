@@ -1,5 +1,20 @@
 [
   {
+    "filing_id": "expungement-2026-0001",
+    "template_id": "expungement",
+    "title": "Request for Expungement",
+    "category": "Criminal Filings",
+    "url": "filings/expungement/expungement-2026-0001.html",
+    "filed_date": "2026-07-13",
+    "signed_date": "2026-07-13",
+    "signed_by": "Gabe the Babe",
+    "index_values": {
+      "applicant_name": "EMEN BLADE",
+      "charges_to_expunge": "all of them"
+    },
+    "search_text": "request for expungement expungement-2026-0001 emen blade all of them gabe the babe"
+  },
+  {
     "filing_id": "bail_agreement-2026-0002",
     "template_id": "bail_agreement",
     "title": "Bail Agreement",
