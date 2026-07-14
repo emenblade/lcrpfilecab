@@ -84,6 +84,13 @@
     "json_file": "expungement.json"
   },
   {
+    "template_id": "pardon",
+    "title": "Petition for Pardon",
+    "category": "Criminal Filings",
+    "html_file": "pardon.html",
+    "json_file": "pardon.json"
+  },
+  {
     "template_id": "bail_agreement",
     "title": "Bail Agreement",
     "category": "Warrants & Orders",
@@ -138,5 +145,12 @@
     "category": "Warrants & Orders",
     "html_file": "warrant_of_execution.html",
     "json_file": "warrant_of_execution.json"
+  },
+  {
+    "template_id": "restraining_order",
+    "title": "Restraining Order",
+    "category": "Warrants & Orders",
+    "html_file": "restraining_order.html",
+    "json_file": "restraining_order.json"
   }
 ]

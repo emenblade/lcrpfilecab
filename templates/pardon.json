@@ -1,0 +1,166 @@
+{
+  "template_id": "pardon",
+  "title": "Petition for Pardon",
+  "source_doc": null,
+  "html_file": "pardon.html",
+  "category": "Criminal Filings",
+  "index_fields": [
+    "petitioner_name",
+    "charges_to_pardon"
+  ],
+  "signers": [
+    {
+      "role": "applicant",
+      "label": "Petitioner",
+      "requires_handoff": false
+    },
+    {
+      "role": "justice",
+      "label": "Approving Justice",
+      "requires_handoff": false,
+      "note": "Filled automatically at approval -- not part of the intake handoff flow."
+    }
+  ],
+  "notes": "Built from Bar Procedures Section 2H. A minimum of 6 months must have elapsed since arrest. A lawyer is required. Fee ranges from $100,000 to $500,000. Unlike expungement, pardons are for capital crimes only and always require a hearing before a Justice.",
+  "fields": [
+    {
+      "key": "petitioner_name",
+      "label": "Petitioner",
+      "prompt": "What is your full legal name?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "date_filed",
+      "label": "Date",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    },
+    {
+      "key": "discordia_email",
+      "label": "Discordia Email",
+      "prompt": "What Discord email/account do you have on file?",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "petitioner_cid",
+      "label": "CID",
+      "prompt": "Use /cid in city. This will add your CID to your clipboard. Paste that in here please.",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "lawyer_name",
+      "label": "Lawyer",
+      "prompt": "A lawyer is required for a pardon petition. Who is representing you? Provide their full name and bar number if known.",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "arrest_date",
+      "label": "Date of Arrest",
+      "prompt": "What date were you arrested for the capital charge(s)? (At least 6 months must have passed since this date.)",
+      "type": "date",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "conviction_date",
+      "label": "Date of Conviction",
+      "prompt": "What date were you convicted of the capital charge(s)?",
+      "type": "date",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "convicting_authority",
+      "label": "Convicted By",
+      "prompt": "Which court or authority convicted you of these charges? (e.g. San Andreas District Court, Supreme Court)",
+      "type": "string",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "charges_to_pardon",
+      "label": "Charge(s) Subject to Pardon",
+      "prompt": "List the specific capital charge(s) you are seeking a pardon for.",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "personal_statement",
+      "label": "Personal Statement",
+      "prompt": "Write a personal statement explaining why you believe you deserve a pardon. Include what you have done since your conviction to reform and rehabilitate.",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "evidence_of_reform",
+      "label": "Character Witnesses & Evidence of Reform",
+      "prompt": "List your character witnesses and any evidence of reform. A pardon requires character witnesses and employee references. Provide names, roles, and what they can attest to.",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "reinstate_weapons_license",
+      "label": "Weapons License Reinstatement Requested",
+      "prompt": "If your pardon is approved, are you requesting your weapons license be reinstated? (You will still need to see a Law Enforcement Officer in person to receive the physical license.)",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
+      "key": "hearing_held",
+      "label": "Hearing Held",
+      "prompt": null,
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "required": true,
+      "filled_by": "justice",
+      "note": "Pardons always require a hearing, but this field records whether the hearing took place as scheduled."
+    },
+    {
+      "key": "pardon_fee",
+      "label": "Fee Assessed",
+      "prompt": null,
+      "type": "string",
+      "required": true,
+      "filled_by": "justice",
+      "note": "Set by the Justice on approval -- ranges from $100,000 to $500,000 depending on the number and severity of charges."
+    },
+    {
+      "key": "approving_justice_name",
+      "label": "Approving Justice",
+      "prompt": null,
+      "type": "signature",
+      "required": true,
+      "filled_by": "justice",
+      "note": "Rendered in cursive. Filled in by the bot when a Justice approves the pardon -- never asked of the applicant."
+    },
+    {
+      "key": "approval_date",
+      "label": "Date (Justice)",
+      "prompt": null,
+      "type": "date",
+      "required": true,
+      "filled_by": "auto"
+    }
+  ]
+}
