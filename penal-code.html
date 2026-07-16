@@ -17,6 +17,46 @@
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Barlow', sans-serif;
     --font-ui: 'Barlow Condensed', sans-serif;
+    --tbl-bg: #fff; --tbl-border: #f0ebe0; --row-hover: #fefcf7;
+    --topbar-bg: rgba(250,246,238,0.96);
+    --shadow: rgba(0,0,0,0.15);
+    --search-bg: #fff;
+    --cl-felony-bg: #fde8e8; --cl-felony-text: #b91c1c; --cl-felony-border: #fecaca;
+    --cl-misd-bg: #fef3c7; --cl-misd-text: #92400e; --cl-misd-border: #fde68a;
+    --cl-inf-bg: #e0f2fe; --cl-inf-text: #075985; --cl-inf-border: #bae6fd;
+    --cl-civil-bg: #f3e8ff; --cl-civil-text: #6b21a8; --cl-civil-border: #e9d5ff;
+    --cl-fee-bg: #fce7f3; --cl-fee-text: #9d174d; --cl-fee-border: #fbcfe8;
+    --cl-util-bg: #d1fae5; --cl-util-text: #065f46; --cl-util-border: #a7f3d0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0806; --panel: #0f0c09; --ink: #e8dcc8;
+      --ink-soft: #9a8c78; --ink-faint: #4a3e2e; --rule: rgba(180,120,40,0.22); --gold: #c8821a;
+      --tbl-bg: #0f0c09; --tbl-border: #1e160d; --row-hover: #161009;
+      --topbar-bg: rgba(10,8,6,0.96);
+      --shadow: rgba(0,0,0,0.4);
+      --search-bg: #161009;
+      --cl-felony-bg: #3b1010; --cl-felony-text: #fca5a5; --cl-felony-border: #5b2020;
+      --cl-misd-bg: #3b2e10; --cl-misd-text: #fde68a; --cl-misd-border: #5b4e20;
+      --cl-inf-bg: #102838; --cl-inf-text: #7dd3fc; --cl-inf-border: #205878;
+      --cl-civil-bg: #281040; --cl-civil-text: #d8b4fe; --cl-civil-border: #482060;
+      --cl-fee-bg: #3b1028; --cl-fee-text: #f9a8d4; --cl-fee-border: #5b2048;
+      --cl-util-bg: #103020; --cl-util-text: #6ee7b7; --cl-util-border: #205040;
+    }
+  }
+  .dark-mode {
+    --bg: #0a0806; --panel: #0f0c09; --ink: #e8dcc8;
+    --ink-soft: #9a8c78; --ink-faint: #4a3e2e; --rule: rgba(180,120,40,0.22); --gold: #c8821a;
+    --tbl-bg: #0f0c09; --tbl-border: #1e160d; --row-hover: #161009;
+    --topbar-bg: rgba(10,8,6,0.96);
+    --shadow: rgba(0,0,0,0.4);
+    --search-bg: #161009;
+    --cl-felony-bg: #3b1010; --cl-felony-text: #fca5a5; --cl-felony-border: #5b2020;
+    --cl-misd-bg: #3b2e10; --cl-misd-text: #fde68a; --cl-misd-border: #5b4e20;
+    --cl-inf-bg: #102838; --cl-inf-text: #7dd3fc; --cl-inf-border: #205878;
+    --cl-civil-bg: #281040; --cl-civil-text: #d8b4fe; --cl-civil-border: #482060;
+    --cl-fee-bg: #3b1028; --cl-fee-text: #f9a8d4; --cl-fee-border: #5b2048;
+    --cl-util-bg: #103020; --cl-util-text: #6ee7b7; --cl-util-border: #205040;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -28,7 +68,7 @@
     position: sticky; top: 0; z-index: 50; display: none;
     align-items: center; justify-content: space-between;
     padding: 0 1rem; height: 44px;
-    background: rgba(250,246,238,0.96); backdrop-filter: blur(10px);
+    background: var(--topbar-bg); backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--rule);
   }
   .topbar a.home { font-family: var(--font-ui); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; }
@@ -79,7 +119,7 @@
   .search-box {
     display: block; width: 100%; max-width: 400px; margin: 0 auto 1.5rem;
     padding: 0.5rem 0.8rem; border: 1px solid var(--rule); border-radius: 3px;
-    background: #fff; color: var(--ink); font-family: var(--font-body); font-size: 13px; outline: none;
+    background: var(--search-bg); color: var(--ink); font-family: var(--font-body); font-size: 13px; outline: none;
   }
   .search-box:focus { border-color: var(--gold); }
   .code-section { margin-bottom: 2rem; }
@@ -100,7 +140,7 @@
   .table-wrap { overflow-x: auto; }
   table {
     width: 100%; border-collapse: collapse; font-size: 12.5px;
-    background: #fff; border: 1px solid var(--rule); border-radius: 3px;
+    background: var(--tbl-bg); border: 1px solid var(--rule); border-radius: 3px;
   }
   thead th {
     font-family: var(--font-ui); font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
@@ -118,8 +158,8 @@
     border-bottom: 1px dashed var(--rule);
   }
   tr { transition: background 0.15s; }
-  tbody tr:hover { background: #fefcf7; }
-  td { padding: 3px 8px; vertical-align: top; border-bottom: 1px solid #f0ebe0; }
+  tbody tr:hover { background: var(--row-hover); }
+  td { padding: 3px 8px; vertical-align: top; border-bottom: 1px solid var(--tbl-border); }
   .c-no { font-family: var(--font-ui); font-weight: 600; font-size: 12px; color: var(--section-color, var(--gold)); white-space: nowrap; }
   .c-name { font-weight: 500; font-size: 12.5px; color: var(--ink); min-width: 160px; }
   .c-cls { white-space: nowrap; }
@@ -129,17 +169,18 @@
     font-family: var(--font-ui); font-size: 9.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
     padding: 1px 6px; border-radius: 2px; white-space: nowrap;
   }
-  .cl.felony { background: #fde8e8; color: #b91c1c; border: 1px solid #fecaca; }
-  .cl.misdemeanor { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-  .cl.infraction { background: #e0f2fe; color: #075985; border: 1px solid #bae6fd; }
-  .cl.civil-statute { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
-  .cl.fee { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
-  .cl.utility { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+  .cl.felony { background: var(--cl-felony-bg); color: var(--cl-felony-text); border: 1px solid var(--cl-felony-border); }
+  .cl.misdemeanor { background: var(--cl-misd-bg); color: var(--cl-misd-text); border: 1px solid var(--cl-misd-border); }
+  .cl.infraction { background: var(--cl-inf-bg); color: var(--cl-inf-text); border: 1px solid var(--cl-inf-border); }
+  .cl.civil-statute { background: var(--cl-civil-bg); color: var(--cl-civil-text); border: 1px solid var(--cl-civil-border); }
+  .cl.fee { background: var(--cl-fee-bg); color: var(--cl-fee-text); border: 1px solid var(--cl-fee-border); }
+  .cl.utility { background: var(--cl-util-bg); color: var(--cl-util-text); border: 1px solid var(--cl-util-border); }
   .hut {
     font-family: var(--font-ui); font-size: 8.5px; font-weight: 700; letter-spacing: .1em;
     background: #1e1e2e; color: #facc15; padding: 1px 5px; border-radius: 2px;
     margin-left: 3px; white-space: nowrap;
   }
+  .dark-mode .hut { background: #facc15; color: #1e1e2e; }
   .back-to-top { font-size: 11px; text-align: right; margin: 2rem 0 0; }
   .back-to-top a { color: var(--ink-faint); text-decoration: none; }
   .back-to-top a:hover { color: var(--gold); }
@@ -154,7 +195,7 @@
       position: fixed; top: 44px; left: 0; bottom: 0; z-index: 40;
       width: 270px; background: var(--bg); height: auto;
       transform: translateX(-100%); transition: transform 0.2s ease;
-      box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+      box-shadow: 2px 0 12px var(--shadow);
     }
     .sidebar.open { transform: translateX(0); }
     .content { padding: 1.2rem 1rem 3rem; max-width: 100%; }
@@ -168,7 +209,10 @@
 
 <div class="topbar">
   <a class="home" href="index.html">&larr; Filing Cabinet</a>
-  <button id="nav-toggle">Contents</button>
+  <div style="display:flex;gap:6px">
+    <button id="nav-toggle">Contents</button>
+    <button id="theme-toggle" style="background:transparent;color:var(--ink-soft);border:1px solid var(--rule);padding:6px 10px;font-size:14px;line-height:1" title="Toggle light/dark mode">🌙</button>
+  </div>
 </div>
 
 <div class="layout">
@@ -1871,11 +1915,24 @@
       tb.style.display = visible > 0 ? '' : 'none';
     });
   }
-  const toggle = document.getElementById('nav-toggle');
+  const navToggle = document.getElementById('nav-toggle');
   const sidebar = document.getElementById('sidebar');
-  if (toggle) {
-    toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+  if (navToggle) {
+    navToggle.addEventListener('click', () => sidebar.classList.toggle('open'));
     sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', () => sidebar.classList.remove('open')));
+  }
+  const themeBtn = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('penal-code-theme');
+  if (saved === 'dark') document.body.classList.add('dark-mode');
+  else if (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches) document.body.classList.add('dark-mode');
+  if (themeBtn) {
+    themeBtn.textContent = document.body.classList.contains('dark-mode') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      themeBtn.textContent = isDark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+      localStorage.setItem('penal-code-theme', isDark ? 'dark' : 'light');
+    });
   }
 </script>
 </body>
