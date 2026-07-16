@@ -44,7 +44,7 @@
       --cl-util-bg: #103020; --cl-util-text: #6ee7b7; --cl-util-border: #205040;
     }
   }
-  .dark-mode {
+  :root.dark-mode {
     --bg: #0a0806; --panel: #0f0c09; --ink: #e8dcc8;
     --ink-soft: #9a8c78; --ink-faint: #4a3e2e; --rule: rgba(180,120,40,0.22); --gold: #c8821a;
     --tbl-bg: #0f0c09; --tbl-border: #1e160d; --row-hover: #161009;
@@ -181,7 +181,7 @@
     background: #1e1e2e; color: #facc15; padding: 1px 5px; border-radius: 2px;
     margin-left: 3px; white-space: nowrap;
   }
-  .dark-mode .hut { background: #facc15; color: #1e1e2e; }
+  :root.dark-mode .hut { background: #facc15; color: #1e1e2e; }
   .back-to-top { font-size: 11px; text-align: right; margin: 2rem 0 0; }
   .back-to-top a { color: var(--ink-faint); text-decoration: none; }
   .back-to-top a:hover { color: var(--gold); }
@@ -1926,8 +1926,8 @@
     sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', () => sidebar.classList.remove('open')));
   }
   const saved = localStorage.getItem('penal-code-theme');
-  if (saved === 'dark') document.body.classList.add('dark-mode');
-  else if (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches) document.body.classList.add('dark-mode');
+  if (saved === 'dark') document.documentElement.classList.add('dark-mode');
+  else if (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark-mode');
   function updateThemeBtns(isDark) {
     document.querySelectorAll('.theme-btn').forEach(b => {
       b.textContent = isDark ? '\u2600\uFE0F Light Mode' : '\uD83C\uDF19 Dark Mode';
@@ -1935,13 +1935,13 @@
   }
   document.querySelectorAll('.theme-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
+      document.documentElement.classList.toggle('dark-mode');
+      const isDark = document.documentElement.classList.contains('dark-mode');
       updateThemeBtns(isDark);
       localStorage.setItem('penal-code-theme', isDark ? 'dark' : 'light');
     });
   });
-  updateThemeBtns(document.body.classList.contains('dark-mode'));
+  updateThemeBtns(document.documentElement.classList.contains('dark-mode'));
 </script>
 </body>
 </html>
