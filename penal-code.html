@@ -28,29 +28,13 @@
     --cl-fee-bg: #fce7f3; --cl-fee-text: #9d174d; --cl-fee-border: #fbcfe8;
     --cl-util-bg: #d1fae5; --cl-util-text: #065f46; --cl-util-border: #a7f3d0;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0a0806; --panel: #0f0c09; --ink: #e8dcc8;
-      --ink-soft: #9a8c78; --ink-faint: #4a3e2e; --rule: rgba(180,120,40,0.22); --gold: #c8821a;
-      --tbl-bg: #0f0c09; --tbl-border: #1e160d; --row-hover: #161009;
-      --topbar-bg: rgba(10,8,6,0.96);
-      --shadow: rgba(0,0,0,0.4);
-      --search-bg: #161009;
-      --cl-felony-bg: #3b1010; --cl-felony-text: #fca5a5; --cl-felony-border: #5b2020;
-      --cl-misd-bg: #3b2e10; --cl-misd-text: #fde68a; --cl-misd-border: #5b4e20;
-      --cl-inf-bg: #102838; --cl-inf-text: #7dd3fc; --cl-inf-border: #205878;
-      --cl-civil-bg: #281040; --cl-civil-text: #d8b4fe; --cl-civil-border: #482060;
-      --cl-fee-bg: #3b1028; --cl-fee-text: #f9a8d4; --cl-fee-border: #5b2048;
-      --cl-util-bg: #103020; --cl-util-text: #6ee7b7; --cl-util-border: #205040;
-    }
-  }
   :root.dark-mode {
-    --bg: #0a0806; --panel: #0f0c09; --ink: #e8dcc8;
-    --ink-soft: #9a8c78; --ink-faint: #4a3e2e; --rule: rgba(180,120,40,0.22); --gold: #c8821a;
-    --tbl-bg: #0f0c09; --tbl-border: #1e160d; --row-hover: #161009;
-    --topbar-bg: rgba(10,8,6,0.96);
-    --shadow: rgba(0,0,0,0.4);
-    --search-bg: #161009;
+    --bg: #080503; --panel: #0c0906; --ink: #e8dcc8;
+    --ink-soft: #8a7c68; --ink-faint: #3a2e1e; --rule: rgba(180,120,40,0.20); --gold: #d4902a;
+    --tbl-bg: #0c0906; --tbl-border: #1a1208; --row-hover: #130e08;
+    --topbar-bg: rgba(8,5,3,0.96);
+    --shadow: rgba(0,0,0,0.5);
+    --search-bg: #130e08;
     --cl-felony-bg: #3b1010; --cl-felony-text: #fca5a5; --cl-felony-border: #5b2020;
     --cl-misd-bg: #3b2e10; --cl-misd-text: #fde68a; --cl-misd-border: #5b4e20;
     --cl-inf-bg: #102838; --cl-inf-text: #7dd3fc; --cl-inf-border: #205878;
@@ -1926,9 +1910,12 @@
     navToggle.addEventListener('click', () => sidebar.classList.toggle('open'));
     sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', () => sidebar.classList.remove('open')));
   }
-  const saved = localStorage.getItem('penal-code-theme');
-  if (saved === 'dark') document.documentElement.classList.add('dark-mode');
-  else if (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark-mode');
+  (function() {
+    const saved = localStorage.getItem('penal-code-theme');
+    if (saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
   function updateThemeBtns(isDark) {
     document.querySelectorAll('.theme-btn').forEach(b => {
       b.textContent = isDark ? '\u2600\uFE0F Light Mode' : '\uD83C\uDF19 Dark Mode';
