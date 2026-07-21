@@ -1,0 +1,14 @@
+{
+  "filing_id": "arrest_warrant-2026-0001",
+  "template_id": "arrest_warrant",
+  "title": "Warrant of Arrest",
+  "category": "Warrants & Orders",
+  "html_file": "arrest_warrant/arrest_warrant-2026-0001.html",
+  "filed_date": "2026-07-21",
+  "signed_date": "2026-07-21",
+  "signed_by": "Keith testerson",
+  "index_values": {
+    "defendant_name": "Alex Langston",
+    "charges": "Mayhem"
+  }
+}
