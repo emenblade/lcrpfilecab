@@ -77,13 +77,6 @@
     "json_file": "pre_filing_docket.json"
   },
   {
-    "template_id": "pardon",
-    "title": "Petition for Pardon",
-    "category": "Criminal Filings",
-    "html_file": "pardon.html",
-    "json_file": "pardon.json"
-  },
-  {
     "template_id": "expungement",
     "title": "Request for Expungement",
     "category": "Criminal Filings",
@@ -145,12 +138,5 @@
     "category": "Warrants & Orders",
     "html_file": "arrest_warrant.html",
     "json_file": "arrest_warrant.json"
-  },
-  {
-    "template_id": "warrant_of_execution",
-    "title": "Warrant of Execution",
-    "category": "Warrants & Orders",
-    "html_file": "warrant_of_execution.html",
-    "json_file": "warrant_of_execution.json"
   }
 ]

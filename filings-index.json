@@ -13,20 +13,5 @@
       "charges": "Mayhem"
     },
     "search_text": "warrant of arrest arrest_warrant-2026-0001 alex langston mayhem keith testerson"
-  },
-  {
-    "filing_id": "warrant_of_execution-2026-0001",
-    "template_id": "warrant_of_execution",
-    "title": "Warrant of Execution",
-    "category": "Warrants & Orders",
-    "url": "filings/warrant_of_execution/warrant_of_execution-2026-0001.html",
-    "filed_date": "2026-07-19",
-    "signed_date": "2026-07-19",
-    "signed_by": "Keith Jamieson",
-    "index_values": {
-      "defendant_name": "Also Keith Jamieson",
-      "case_number": "Just testing."
-    },
-    "search_text": "warrant of execution warrant_of_execution-2026-0001 also keith jamieson just testing. keith jamieson"
   }
 ]
