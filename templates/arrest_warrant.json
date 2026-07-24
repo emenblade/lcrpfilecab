@@ -39,6 +39,14 @@
       "filled_by": "applicant"
     },
     {
+      "key": "affidavit",
+      "label": "Probable Cause Affidavit",
+      "prompt": "Provide the probable cause for this arrest warrant — what facts support the belief that this person committed the crime(s)?",
+      "type": "text",
+      "required": true,
+      "filled_by": "applicant"
+    },
+    {
       "key": "date_filed",
       "label": "Dated",
       "prompt": null,
