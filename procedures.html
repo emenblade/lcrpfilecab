@@ -27,6 +27,22 @@
     --font-body:    'Barlow', sans-serif;
     --font-ui:      'Barlow Condensed', sans-serif;
   }
+  :root.dark-mode {
+    --bg:          #080503;
+    --panel:       #0c0906;
+    --ink:         #e8dcc8;
+    --ink-soft:    #8a7c68;
+    --ink-faint:   #3a2e1e;
+    --rule:        rgba(180,120,40,0.20);
+    --gold:        #d4902a;
+
+    --part-intro:      #8a7a5c;
+    --part-civil:      #d4902a;
+    --part-criminal:   #f47c7c;
+    --part-civilcourt: #5db8c0;
+    --part-appendix:   #9b99b3;
+  }
+  :root.dark-mode .letterhead { filter: brightness(0.85); }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
@@ -215,7 +231,10 @@
 
 <div class="topbar">
   <a class="home" href="/">&larr; Filing Cabinet</a>
-  <button id="nav-toggle">Contents</button>
+  <div style="display:flex;gap:6px">
+    <button id="nav-toggle">Contents</button>
+    <button class="theme-btn" style="background:transparent;color:var(--ink-soft);border:1px solid var(--rule);padding:6px 10px;font-size:13px;line-height:1" title="Toggle light/dark mode">🌙</button>
+  </div>
 </div>
 
 <div class="layout">
@@ -229,12 +248,46 @@
 <div class="nav-part part-civil">
 <p class="nav-part-label">Part II &middot; Civil Administration</p>
 <a class="nav-chapter" href="#sec-2">2. Civil Administration</a>
+<a class="nav-chapter nav-sub" href="#sec-2A">A. Name Change Requests</a>
+<a class="nav-chapter nav-sub" href="#sec-2B">B. Marriage Registration</a>
+<a class="nav-chapter nav-sub" href="#sec-2C">C. Divorce</a>
+<a class="nav-chapter nav-sub" href="#sec-2D">D. Annulment</a>
+<a class="nav-chapter nav-sub" href="#sec-2E">E. Will Management</a>
+<a class="nav-chapter nav-sub" href="#sec-2F">F. Medical Power of Attorney</a>
+<a class="nav-chapter nav-sub" href="#sec-2G">G. Expungements</a>
+<a class="nav-chapter nav-sub" href="#sec-2H">H. Pardons</a>
+<a class="nav-chapter nav-sub" href="#sec-2I">I. Business Partnerships</a>
 </div>
 <div class="nav-part part-criminal">
 <p class="nav-part-label">Part III &middot; Criminal Administration</p>
 <a class="nav-chapter" href="#sec-3">3. Criminal Administration - Court Theory</a>
+<a class="nav-chapter nav-sub" href="#sec-3A">A. Reasonable Suspicion vs Probable Cause</a>
+<a class="nav-chapter nav-sub" href="#sec-3B">B. The Warrants Process</a>
 <a class="nav-chapter" href="#sec-4">4. Criminal Administration - Before Court</a>
+<a class="nav-chapter nav-sub" href="#sec-4A">A. Pleading Options</a>
+<a class="nav-chapter nav-sub" href="#sec-4B">B. Cell Representation</a>
+<a class="nav-chapter nav-sub" href="#sec-4C">C. Bail</a>
 <a class="nav-chapter" href="#sec-5">5. Criminal Administration - The Court Process</a>
+<a class="nav-chapter nav-sub" href="#sec-5A">A. The Purpose of Criminal Court</a>
+<a class="nav-chapter nav-sub" href="#sec-5B">B. Pre-Filings</a>
+<a class="nav-chapter nav-sub" href="#sec-5C">C. Moving into Court</a>
+<a class="nav-chapter nav-sub" href="#sec-5D">D. Managing on the Docket</a>
+<a class="nav-chapter nav-sub" href="#sec-5E">E. Recusal of a Judge</a>
+<a class="nav-chapter nav-sub" href="#sec-5F">F. Discovery</a>
+<a class="nav-chapter nav-sub" href="#sec-5G">G. Evidence</a>
+<a class="nav-chapter nav-sub" href="#sec-5H">H. Motions</a>
+<a class="nav-chapter nav-sub" href="#sec-5I">I. Franks Hearing</a>
+<a class="nav-chapter nav-sub" href="#sec-5J">J. Default vs Summary Judgment</a>
+<a class="nav-chapter nav-sub" href="#sec-5K">K. Scheduling</a>
+<a class="nav-chapter nav-sub" href="#sec-5L">L. Rules of the Court</a>
+<a class="nav-chapter nav-sub" href="#sec-5M">M. Open vs Closed Sessions</a>
+<a class="nav-chapter nav-sub" href="#sec-5N">N. Arrival at Court</a>
+<a class="nav-chapter nav-sub" href="#sec-5O">O. Opening of Court</a>
+<a class="nav-chapter nav-sub" href="#sec-5P">P. Pre-Trial Motions</a>
+<a class="nav-chapter nav-sub" href="#sec-5Q">Q. Opening Statements</a>
+<a class="nav-chapter nav-sub" href="#sec-5R">R. Being a Witness</a>
+<a class="nav-chapter nav-sub" href="#sec-5S">S. Hostile Witness</a>
+<a class="nav-chapter nav-sub" href="#sec-5T">T. Evidence & Witness Testimony</a>
 </div>
 <div class="nav-part part-civilcourt">
 <p class="nav-part-label">Part IV &middot; Civil Court Process</p>
@@ -243,7 +296,17 @@
 <div class="nav-part part-appendix">
 <p class="nav-part-label">Part V &middot; Appendices & Reference</p>
 <a class="nav-chapter" href="#sec-7">7. Appendices to procedures /helpful information</a>
+<a class="nav-chapter nav-sub" href="#sec-7C">C. Restraining Orders</a>
+<a class="nav-chapter nav-sub" href="#sec-7D">D. Charge Stacking</a>
+<a class="nav-chapter nav-sub" href="#sec-7E">E. Timescales at the DOJ</a>
+<a class="nav-chapter nav-sub" href="#sec-7F">F. Conflicts of Interest</a>
+<a class="nav-chapter nav-sub" href="#sec-7G">G. Seizure of Assets</a>
+<a class="nav-chapter nav-sub" href="#sec-7H">H. Mental Health Evaluations</a>
+<a class="nav-chapter nav-sub" href="#sec-7I">I. Authorized Case Law & Doctrines</a>
 </div>
+    <div style="margin-top:auto;padding-top:1rem;border-top:1px solid var(--rule)">
+      <button class="theme-btn" style="width:100%;font-family:var(--font-ui);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--panel);color:var(--ink-soft);border:1px solid var(--rule);border-radius:3px;padding:7px;cursor:pointer">🌙 Dark Mode</button>
+    </div>
   </nav>
 
   <main class="content">
@@ -525,6 +588,26 @@
     toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
     sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', () => sidebar.classList.remove('open')));
   }
+  (function() {
+    const saved = localStorage.getItem('bar-procedures-theme');
+    if (saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+  function updateThemeBtns(isDark) {
+    document.querySelectorAll('.theme-btn').forEach(b => {
+      b.textContent = isDark ? '\u2600\uFE0F Light Mode' : '\uD83C\uDF19 Dark Mode';
+    });
+  }
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark-mode');
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      updateThemeBtns(isDark);
+      localStorage.setItem('bar-procedures-theme', isDark ? 'dark' : 'light');
+    });
+  });
+  updateThemeBtns(document.documentElement.classList.contains('dark-mode'));
 </script>
 </body>
 </html>
