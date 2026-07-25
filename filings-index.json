@@ -1,5 +1,20 @@
 [
   {
+    "filing_id": "vehicle_return-2026-0001",
+    "template_id": "vehicle_return",
+    "title": "Vehicle Return",
+    "category": "Warrants & Orders",
+    "url": "filings/vehicle_return/vehicle_return-2026-0001.html",
+    "filed_date": "2026-07-25",
+    "signed_date": "2026-07-25",
+    "signed_by": "Keith Jamieson",
+    "index_values": {
+      "owner_name": "testy testerson",
+      "vehicle_vin_location": "unkown"
+    },
+    "search_text": "vehicle return vehicle_return-2026-0001 testy testerson unkown keith jamieson"
+  },
+  {
     "filing_id": "arrest_warrant-2026-0001",
     "template_id": "arrest_warrant",
     "title": "Warrant of Arrest",
