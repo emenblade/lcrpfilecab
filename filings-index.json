@@ -1,20 +1,5 @@
 [
   {
-    "filing_id": "foia_request-2026-0001",
-    "template_id": "foia_request",
-    "title": "Freedom of Information Request",
-    "category": "Court Filings & Petitions",
-    "url": "filings/foia_request/foia_request-2026-0001.html",
-    "filed_date": "2026-07-25",
-    "signed_date": "2026-07-25",
-    "signed_by": "Keith Jamieson",
-    "index_values": {
-      "applicant_name": "Keith Jamieson",
-      "request_type": "this is a test!"
-    },
-    "search_text": "freedom of information request foia_request-2026-0001 keith jamieson this is a test! keith jamieson"
-  },
-  {
     "filing_id": "arrest_warrant-2026-0001",
     "template_id": "arrest_warrant",
     "title": "Warrant of Arrest",
