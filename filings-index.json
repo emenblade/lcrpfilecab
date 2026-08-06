@@ -1,5 +1,20 @@
 [
   {
+    "filing_id": "arrest_warrant-2026-0003",
+    "template_id": "arrest_warrant",
+    "title": "Warrant of Arrest",
+    "category": "Warrants & Orders",
+    "url": "filings/arrest_warrant/arrest_warrant-2026-0003.html",
+    "filed_date": "2026-08-05",
+    "signed_date": "2026-08-05",
+    "signed_by": "Judge Keith Jamieson",
+    "index_values": {
+      "defendant_name": "Jimmy Jitters",
+      "charges": "store robbery, felony assault, evading"
+    },
+    "search_text": "warrant of arrest arrest_warrant-2026-0003 jimmy jitters store robbery, felony assault, evading judge keith jamieson"
+  },
+  {
     "filing_id": "vehicle_return-2026-0001",
     "template_id": "vehicle_return",
     "title": "Vehicle Return",
